@@ -1,0 +1,69 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Bridge {
+  structureNumber   String      @id @unique
+  stateCode         Int
+  yearBuilt         Int
+  yearReconstructed Int?
+  routePrefix       String
+  functionalClass   Int
+  designLoad        String?
+  conditions        Condition[] // One bridge can have many conditions
+  locations         Location[] // One bridge can have many locations
+  ownerships        Ownership[] // One bridge can have multiple owners
+  trafficDetails    Traffic[] // One bridge can have multiple traffic records
+}
+
+model Condition {
+  id                      String  @id @default(cuid())
+  structureNumber         String
+  deckCondition           String
+  superstructureCondition String
+  substructureCondition   String
+  culvertCondition        String?
+  structuralEval          String
+  scourCritical           String
+  lowestRating            Int
+  Bridge                  Bridge  @relation(fields: [structureNumber], references: [structureNumber])
+}
+
+model Location {
+  id              String @id @default(cuid())
+  structureNumber String
+  latitude        Float
+  longitude       Float
+  countyCode      Int
+  placeCode       Int
+  description     String
+  detourKilos     Int
+  Bridge          Bridge @relation(fields: [structureNumber], references: [structureNumber])
+}
+
+model Ownership {
+  id              String @id @default(cuid())
+  structureNumber String
+  owner           Int
+  maintenance     Int
+  toll            Int
+  Bridge          Bridge @relation(fields: [structureNumber], references: [structureNumber])
+}
+
+model Traffic {
+  id              String @id @default(cuid())
+  structureNumber String
+  adt             Int
+  yearAdt         Int
+  futureAdt       Int
+  percentTruck    Int?
+  Bridge          Bridge @relation(fields: [structureNumber], references: [structureNumber])
+}
