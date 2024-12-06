@@ -25,7 +25,7 @@ location.to_csv("location.csv", index=False)
 # Table 3: Condition & Ratings
 condition_columns = [
     "STRUCTURE_NUMBER_008", "DECK_COND_058", "SUPERSTRUCTURE_COND_059", "SUBSTRUCTURE_COND_060",
-    "CULVERT_COND_062", "STRUCTURAL_EVAL_067", "SCOUR_CRITICAL_113", "LOWEST_RATING"
+    "CULVERT_COND_062", "STRUCTURAL_EVAL_067", "BRIDGE_CONDITION", "LOWEST_RATING"
 ]
 condition = full_data[condition_columns]
 condition.to_csv("condition.csv", index=False)

@@ -32,7 +32,7 @@ model Condition {
   substructureCondition   String
   culvertCondition        String?
   structuralEval          String
-  scourCritical           String
+  bridgeCondition         String
   lowestRating            Int
   Bridge                  Bridge  @relation(fields: [structureNumber], references: [structureNumber])
 }

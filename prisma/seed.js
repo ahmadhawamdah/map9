@@ -159,7 +159,7 @@ async function seedOwnerships() {
 
 async function seedConditions() {
   try {
-    console.log("Starting seeding process for locations...");
+    console.log("Starting seeding process for conditions...");
 
     const conditionData = [];
 
@@ -174,7 +174,7 @@ async function seedConditions() {
           substructureCondition: row.SUBSTRUCTURE_COND_060,
           culvertCondition: row.CULVERT_COND_062,
           structuralEval: row.STRUCTURAL_EVAL_067,
-          scourCritical: row.SCOUR_CRITICAL_113,
+          bridgeCondition: row.BRIDGE_CONDITION,
           lowestRating: parseInt(row.LOWEST_RATING),
         });
       })
@@ -214,7 +214,7 @@ async function seedConditions() {
 
 async function seedTraffic() {
   try {
-    console.log("Starting seeding process for locations...");
+    console.log("Starting seeding process for conditions...");
 
     const trafficData = [];
 
@@ -266,7 +266,7 @@ async function seedTraffic() {
 
 // Run the seeding script
 // seedBridges();
-seedLocations();
-seedOwnerships();
+// seedLocations();
+// seedOwnerships();
 seedConditions();
 // seedTraffic();
