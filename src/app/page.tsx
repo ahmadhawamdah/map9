@@ -6,7 +6,7 @@ const Home: React.FC = () => {
   const router = useRouter();
 
   const handleStartExploring = () => {
-    router.push("/bridges");
+    router.push("/bridge");
   };
 
   return (

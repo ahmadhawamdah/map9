@@ -3,38 +3,25 @@
 import Button from "@/ui/Button";
 import React, { useState } from "react";
 import BridgeList from "./BridgeList";
-import { Bridge } from "../../typing";
+import { Bridge, FilterBridgesParams, FilterConditionsParams } from "../../typing";
 import FilterBridges from "./filter-files/FilterBridges";
+import FilterConditions from "./filter-files/FilterConditions";
 
-interface FilterParams {
-  stateCode: number | string;
-  yearBuilt: { min: number; max: number };
-  functionalClass:  { min: number; max: number };
-  designLoad: string;
+interface Map9Props {
+  type: "bridge" | "condition";
+  filterParams: FilterBridgesParams | FilterConditionsParams;
+  handleFilterChange: (key: string, value: any) => void;
 }
 
-const Map9: React.FC = () => {
-  const [loading, setLoading] = useState<boolean>(false);
-  const [filterParams, setFilterParams] = useState<FilterParams>({
-    stateCode: "",
-    yearBuilt: { min: 1967, max: 2024 },
-    functionalClass:{ min: 0, max: 20 },
-    designLoad: "",
-  });
-
-  const [filteredBridges, setFilteredBridges] = useState<Bridge[]>([]);
-
-  const handleFilterChange = (key: string, value: any) => {
-    setFilterParams((prev) => ({
-      ...prev,
-      [key]: value,
-    }));
-  };
+const Map9: React.FC<Map9Props> = ({ type, filterParams, handleFilterChange }) => {
+  const [filteredResults, setFilteredResults] = useState<Bridge[]>([]);
+  const [loading, setLoading] = useState(false);
 
   const handleApplyFilters = async () => {
     try {
       setLoading(true);
-      const res = await fetch("/api/bridges", {
+
+      const res = await fetch(`/api/${type}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -43,25 +30,33 @@ const Map9: React.FC = () => {
       });
 
       if (!res.ok) {
-        throw new Error("Failed to fetch bridges");
+        throw new Error("Failed to fetch data");
       }
 
       const data: Bridge[] = await res.json();
-      setFilteredBridges(data);
+      setFilteredResults(data);
     } catch (error) {
-      console.error("Error fetching bridges:", error);
+      console.error("Error fetching data:", error);
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6 text-black">Bridge Dashboard</h1>
-
+    <div>
       <div className="bg-white p-6 rounded-lg shadow-md mb-6">
         <h2 className="text-xl font-semibold mb-4 text-black">Filters</h2>
-        <FilterBridges filterParams={filterParams} handleFilterChange={handleFilterChange} />
+        {type === "bridge" ? (
+          <FilterBridges
+            filterParams={filterParams as FilterBridgesParams}
+            handleFilterChange={handleFilterChange}
+          />
+        ) : (
+          <FilterConditions
+            filterParams={filterParams as FilterConditionsParams}
+            handleFilterChange={handleFilterChange}
+          />
+        )}
         <div className="mt-6">
           <Button
             onClick={handleApplyFilters}
@@ -71,8 +66,7 @@ const Map9: React.FC = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <BridgeList bridges={filteredBridges as Bridge[]} />
-        {/* <Map bridges={filteredBridges} /> */}
+        <BridgeList bridges={filteredResults} />
       </div>
     </div>
   );

@@ -1,6 +1,12 @@
 {
-  "/page": "app/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
   "/_not-found/page": "app/_not-found/page.js",
-  "/api/bridges/route": "app/api/bridges/route.js"
+  "/api/bridge/route": "app/api/bridge/route.js",
+  "/dashboard/condition/page": "app/dashboard/condition/page.js",
+  "/dashboard/bridge/page": "app/dashboard/bridge/page.js",
+  "/api/condition/route": "app/api/condition/route.js",
+  "/page": "app/page.js",
+  "/(dashboard)/bridge/page": "app/(dashboard)/bridge/page.js",
+  "/(dashboard)/condition/page": "app/(dashboard)/condition/page.js"
 }

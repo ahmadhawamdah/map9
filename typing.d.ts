@@ -55,3 +55,19 @@ export interface Traffic {
   percentTruck?: number;
   Bridge: Bridge; // Relation to Bridge
 }
+
+export interface FilterBridgesParams {
+  stateCode: number | string;
+  yearBuilt: { min: number; max: number };
+  functionalClass: { min: number; max: number };
+  designLoad: string;
+}
+
+export interface FilterConditionsParams {
+  deckCondition: string;
+  superstructureCondition: string;
+  culvertCondition: string;
+  structuralEval: string;
+  bridgeCondition: string;
+  lowestRating: { min: number; max: number };
+}
