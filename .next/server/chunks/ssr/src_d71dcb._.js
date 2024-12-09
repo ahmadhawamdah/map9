@@ -114,7 +114,7 @@ __turbopack_esm__({
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 ;
-const TextInput = ({ label, placeholder, value, onChange })=>{
+const TextInput = ({ label, placeholder, value, onChange, description })=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "flex flex-col space-y-2",
         children: [
@@ -123,31 +123,40 @@ const TextInput = ({ label, placeholder, value, onChange })=>{
                 children: label
             }, void 0, false, {
                 fileName: "[project]/src/ui/TextInput.tsx",
-                lineNumber: 18,
+                lineNumber: 21,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "relative",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                    type: "text",
-                    placeholder: placeholder,
-                    value: value,
-                    onChange: onChange,
-                    className: "outline-none px-4 py-2 w-full border border-gray-300 rounded focus:ring-2 focus:ring-black text-black"
-                }, void 0, false, {
-                    fileName: "[project]/src/ui/TextInput.tsx",
-                    lineNumber: 20,
-                    columnNumber: 9
-                }, this)
-            }, void 0, false, {
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                        type: "text",
+                        placeholder: placeholder,
+                        value: value,
+                        onChange: onChange,
+                        className: "outline-none px-4 py-2 w-full border border-gray-300 rounded focus:ring-2 focus:ring-black text-black"
+                    }, void 0, false, {
+                        fileName: "[project]/src/ui/TextInput.tsx",
+                        lineNumber: 23,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        children: description
+                    }, void 0, false, {
+                        fileName: "[project]/src/ui/TextInput.tsx",
+                        lineNumber: 30,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
                 fileName: "[project]/src/ui/TextInput.tsx",
-                lineNumber: 19,
+                lineNumber: 22,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/ui/TextInput.tsx",
-        lineNumber: 17,
+        lineNumber: 20,
         columnNumber: 5
     }, this);
 };
@@ -243,19 +252,27 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$ui$2f$TextInput$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/ui/TextInput.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$ui$2f$DropDown$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/ui/DropDown.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$ui$2f$RangeInput$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/ui/RangeInput.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$reverseMap$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/utils/reverseMap.ts [app-ssr] (ecmascript)");
 ;
 ;
 ;
 ;
-const designLoads = [
-    "C",
-    "B",
-    "A",
-    "9",
-    "6",
-    "5"
-];
+;
+const serviceMap = {
+    "1": "Highway, with or without pedestrian",
+    "2": "Railroad",
+    "3": "Pedestrian-bicycle",
+    "4": "Highway-railroad",
+    "5": "Waterway",
+    "6": "Highway-waterway",
+    "7": "Railroad-waterway",
+    "8": "Highway-waterway-railroad",
+    "9": "Relief for waterway",
+    "0": "Other"
+};
 const FilterBridges = ({ filterParams, handleFilterChange })=>{
+    // Reverse mapping: from service name to its integer key
+    const reverseServiceMap = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$reverseMap$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["reverseMap"])(serviceMap);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "grid grid-cols-2 gap-4",
         children: [
@@ -266,7 +283,7 @@ const FilterBridges = ({ filterParams, handleFilterChange })=>{
                 onChange: (e)=>handleFilterChange("stateCode", e.target.value)
             }, void 0, false, {
                 fileName: "[project]/src/components/filter-files/FilterBridges.tsx",
-                lineNumber: 24,
+                lineNumber: 40,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$ui$2f$RangeInput$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -275,7 +292,7 @@ const FilterBridges = ({ filterParams, handleFilterChange })=>{
                 onChange: (value)=>handleFilterChange("yearBuilt", value)
             }, void 0, false, {
                 fileName: "[project]/src/components/filter-files/FilterBridges.tsx",
-                lineNumber: 30,
+                lineNumber: 46,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$ui$2f$RangeInput$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -284,23 +301,27 @@ const FilterBridges = ({ filterParams, handleFilterChange })=>{
                 onChange: (value)=>handleFilterChange("functionalClass", value)
             }, void 0, false, {
                 fileName: "[project]/src/components/filter-files/FilterBridges.tsx",
-                lineNumber: 35,
+                lineNumber: 51,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$ui$2f$DropDown$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                 label: "Design Load",
-                options: designLoads,
-                selected: filterParams.designLoad,
-                onSelect: (value)=>handleFilterChange("designLoad", value)
+                options: Object.values(serviceMap),
+                selected: serviceMap[filterParams.serviceOn],
+                onSelect: (value)=>{
+                    // Convert selected value back to integer key
+                    const selectedKey = reverseServiceMap[value];
+                    handleFilterChange("serviceOn", parseInt(selectedKey));
+                }
             }, void 0, false, {
                 fileName: "[project]/src/components/filter-files/FilterBridges.tsx",
-                lineNumber: 40,
+                lineNumber: 56,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/filter-files/FilterBridges.tsx",
-        lineNumber: 23,
+        lineNumber: 39,
         columnNumber: 5
     }, this);
 };

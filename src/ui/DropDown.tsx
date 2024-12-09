@@ -3,19 +3,14 @@ import React, { useState, useEffect, useRef } from "react";
 
 type DropdownProps = {
   options: string[];
-  selected: any;
+  selected: string;
   onSelect: (value: string) => void;
   label?: string;
 };
 
 const Dropdown: React.FC<DropdownProps> = ({ options, selected, onSelect, label }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [searchTerm, setSearchTerm] = useState(selected || "");
   const dropdownRef = useRef<HTMLDivElement>(null);
-  
-  const filteredOptions = options.filter((option) =>
-    option.toLowerCase().includes(searchTerm.toLowerCase())
-  );
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -24,7 +19,7 @@ const Dropdown: React.FC<DropdownProps> = ({ options, selected, onSelect, label 
         setIsOpen(false);
       }
     };
-    
+
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
@@ -34,23 +29,20 @@ const Dropdown: React.FC<DropdownProps> = ({ options, selected, onSelect, label 
   return (
     <div className="relative" ref={dropdownRef}>
       {label && <label className="text-black font-medium mb-2 block">{label}</label>}
-      <input
-        type="text"
-        value={searchTerm}
-        onFocus={() => setIsOpen(true)} // Open dropdown on focus
-        onChange={(e) => setSearchTerm(e.target.value)} // Update search term
-        className="w-full text-black px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-black focus:outline-none"
-        placeholder="Select or search..."
-      />
+      <button
+        onClick={() => setIsOpen((prev) => !prev)}
+        className="w-full text-left px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-black focus:outline-none bg-white"
+      >
+        {selected || "Select an option"}
+      </button>
       {isOpen && (
         <ul className="absolute w-full mt-1 bg-white border border-gray-300 rounded shadow-lg max-h-40 overflow-y-auto z-10">
-          {filteredOptions.length > 0 ? (
-            filteredOptions.map((option, index) => (
+          {options.length > 0 ? (
+            options.map((option, index) => (
               <li
                 key={index}
                 onClick={() => {
                   onSelect(option); // Select the option
-                  setSearchTerm(option); // Update input with the selected option
                   setIsOpen(false); // Close the dropdown
                 }}
                 className="px-4 py-2 text-black hover:bg-yellow-300 cursor-pointer"
@@ -59,7 +51,7 @@ const Dropdown: React.FC<DropdownProps> = ({ options, selected, onSelect, label 
               </li>
             ))
           ) : (
-            <li className="px-4 py-2 text-gray-500">No options found</li>
+            <li className="px-4 py-2 text-gray-500">No options available</li>
           )}
         </ul>
       )}

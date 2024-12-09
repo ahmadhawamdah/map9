@@ -1,73 +1,150 @@
 export interface Bridge {
   structureNumber: string;
-  stateCode: number;
   yearBuilt: number;
   yearReconstructed?: number;
-  routePrefix: string;
+  history: number;
+  serviceOn: number;
+  routePrefix: number;
+  location: string;
+  fedAgency: string;
+  lat: number;
+  long: number;
+
+  navigation: Navigation[];
+  condition: Condition[];
+  geometry: Geometry[];
+  maintenance: Maintenance[];
+  structure: Structure[];
+}
+
+export interface Navigation {
+  id: string;
+  structureNumber: string;
+  direction: number;
+  trafficDirection: number;
+  navigation?: number;
+  toll: boolean;
   functionalClass: number;
-  designLoad?: string;
-  conditions: Condition[]; // One bridge can have many conditions
-  locations: Location[]; // One bridge can have many locations
-  ownerships: Ownership[]; // One bridge can have multiple owners
-  trafficDetails: Traffic[]; // One bridge can have multiple traffic records
+  detourKilos: number;
+  kilopoint: number;
+  trafficLanesOn: number;
+  trafficLanesUnd: number;
+  adt: number;
+  percentAdtTruck?: number;
+  yearAdt: number;
+  futureAdt: number;
+  yearOfFutureAdt: number;
+
+  Bridge: Bridge;
 }
 
 export interface Condition {
   id: string;
   structureNumber: string;
-  deckCondition: string;
-  superstructureCondition: string;
-  substructureCondition: string;
-  culvertCondition?: string;
-  structuralEval: string;
   bridgeCondition: string;
+  deckCond: string;
+  superstructureCond: string;
+  substructureCond: string;
+  channelCond?: string;
+  culvertCond?: string;
+  structuralEval: string;
+  deckGeometryEval: string;
+  underclearanceEval?: string;
+  waterwayEval?: string;
+  apprRoadEval: number;
+  postingEval: number;
   lowestRating: number;
-  Bridge: Bridge; // Relation to Bridge
+
+  Bridge: Bridge;
 }
 
-export interface Location {
+export interface Maintenance {
   id: string;
   structureNumber: string;
-  latitude: number;
-  longitude: number;
-  countyCode: number;
-  placeCode: number;
-  description: string;
-  detourKilos: number;
-  Bridge: Bridge; // Relation to Bridge
-}
-
-export interface Ownership {
-  id: string;
-  structureNumber: string;
-  owner: number;
   maintenance: number;
-  toll: number;
-  Bridge: Bridge; // Relation to Bridge
+  maintenanceType: number;
+  bridgeImprovement?: number;
+  roadwayImprovement?: number;
+  totalImprovement?: number;
+  yearOfImprovement?: number;
+  workProposed?: number;
+  inspectionFrequency: number;
+  fractureCritical?: string;
+  openClosedPosted: string;
+
+  Bridge: Bridge;
 }
 
-export interface Traffic {
+export interface Structure {
   id: string;
   structureNumber: string;
-  adt: number; // Average Daily Traffic
-  yearAdt: number;
-  futureAdt: number;
-  percentTruck?: number;
-  Bridge: Bridge; // Relation to Bridge
+  apprKind: number;
+  structureKind: number;
+  structureType: number;
+  apprType: number;
+  mainUnitSpans: number;
+  apprSpans: number;
+  medianCode: number;
+  deckStructureType: string;
+  railings?: number;
+  transitions?: number;
+  apprRail?: number;
+  apprRailEnd?: number;
+  parallelStructure: string;
+
+  Bridge: Bridge;
 }
 
-export interface FilterBridgesParams {
-  stateCode: number | string;
+export interface Geometry {
+  id: string;
+  structureNumber: string;
+  minVertClearance: number;
+  apprWidth: number;
+  structureFlared: number;
+  navVertClearance: number;
+  navHorrClearance: number;
+  leftCurbWidth: number;
+  rightCurbWidth: number;
+  roadwayWidth: number;
+  deckWidth: number;
+  vertClearOver: number;
+  vertClearUnderRef?: string;
+  vertClearUnder: number;
+  latUnderRef?: string;
+  latUnder: number;
+  leftLatUnder: number;
+  horrClearance: number;
+  deckArea: number;
+  maxSpanLength: number;
+  structureLength: number;
+  minNavClearance: number;
+  degreesSkew: number;
+
+  Bridge: Bridge;
+}
+
+// Filter Files Types:
+interface FilterBridgesParams {
+  location: string | number;
   yearBuilt: { min: number; max: number };
-  functionalClass: { min: number; max: number };
-  designLoad: string;
+  yearReconstructed: { min: number; max: number };
+  fedAgency: string;
+  serviceOn: number | null; // Allow null
+  routePrefix: number;
 }
 
-export interface FilterConditionsParams {
-  deckCondition: string;
-  superstructureCondition: string;
-  culvertCondition: string;
-  structuralEval: string;
+interface FilterConditionsParams {
   bridgeCondition: string;
+  deckCond: string;
+  superstructureCond: string;
+  substructureCond: string;
+  channelCond: string;
+  culvertCond: string;
+  structuralEval: string;
+  deckGeometryEval: string;
+  underclearanceEval: string;
+  waterwayEval: string;
+  apprRoadEval: { min: number; max: number };
+  postingEval: { min: number; max: number };
   lowestRating: { min: number; max: number };
 }

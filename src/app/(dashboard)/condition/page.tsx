@@ -6,13 +6,21 @@ import { FilterConditionsParams } from "../../../../typing";
 
 const ConditionDashboard: React.FC = () => {
   const [conditionFilterParams, setConditionFilterParams] = useState<FilterConditionsParams>({
-    deckCondition: "",
-    superstructureCondition: "",
-    culvertCondition: "",
-    structuralEval: "",
     bridgeCondition: "",
-    lowestRating: { min: 0, max: 10 },
+    deckCond: "",
+    superstructureCond: "",
+    substructureCond: "",
+    channelCond: "",
+    culvertCond: "",
+    structuralEval: "",
+    deckGeometryEval: "",
+    underclearanceEval: "",
+    waterwayEval: "",
+    apprRoadEval: { min: 0, max: 8 },
+    postingEval: { min: 0, max: 5 },
+    lowestRating: { min: 0, max: 9 },
   });
+
 
   const handleFilterChange = (key: string, value: any) => {
     setConditionFilterParams((prev) => ({
@@ -20,6 +28,7 @@ const ConditionDashboard: React.FC = () => {
       [key]: value,
     }));
   };
+
 
   return (
     <div>

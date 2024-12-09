@@ -5,6 +5,7 @@ type TextInputProps = {
   placeholder: string;
   value: any;
   onChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  description?: string;
 };
 
 const TextInput: React.FC<TextInputProps> = ({
@@ -12,6 +13,7 @@ const TextInput: React.FC<TextInputProps> = ({
   placeholder,
   value,
   onChange,
+  description
 }) => {
   return (
     <div className="flex flex-col space-y-2">
@@ -24,6 +26,7 @@ const TextInput: React.FC<TextInputProps> = ({
           onChange={onChange}
           className="outline-none px-4 py-2 w-full border border-gray-300 rounded focus:ring-2 focus:ring-black text-black"
         />
+        <p>{description}</p>
       </div>
     </div>
   );

@@ -6,10 +6,12 @@ import { FilterBridgesParams } from "../../../../typing";
 
 const BridgeDashboard: React.FC = () => {
   const [bridgeFilterParams, setBridgeFilterParams] = useState<FilterBridgesParams>({
-    stateCode: "",
+    location: "",
     yearBuilt: { min: 1967, max: 2024 },
-    functionalClass: { min: 0, max: 20 },
-    designLoad: "",
+    yearReconstructed: { min: 0, max: 2024 },
+    fedAgency: "",
+    serviceOn: 0,
+    routePrefix: 0,
   });
 
   const handleFilterChange = (key: string, value: any) => {

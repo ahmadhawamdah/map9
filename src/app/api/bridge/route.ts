@@ -7,37 +7,44 @@ export async function POST(req: Request) {
     const body = await req.json();
 
     const {
-      stateCode = "",
+      location = "",
       yearBuilt = { min: 1967, max: 2024 },
-      functionalClass = { min: 0, max: 20 },
-      designLoad = "",
+      yearReconstructed = { min: 0, max: 2024 },
+      fedAgency = "",
+      serviceOn = 0,
+      routePrefix = 0,
     } = body;
 
+    // Build filters dynamically
     const filters: any = {};
-    if (stateCode) filters.stateCode = parseInt(stateCode, 10);
+    if (location) filters.stateCode = parseInt(location, 10);
     if (yearBuilt.min || yearBuilt.max) {
       filters.yearBuilt = {
         gte: yearBuilt.min || undefined,
         lte: yearBuilt.max || undefined,
       };
-      if (functionalClass.min || functionalClass.max) {
-        filters.functionalClass = {
-          gte: functionalClass.min || undefined,
-          lte: functionalClass.max || undefined,
-        };
-      }
     }
+    if (yearReconstructed.min || yearReconstructed.max) {
+      filters.yearReconstructed = {
+        gte: yearReconstructed.min || undefined,
+        lte: yearReconstructed.max || undefined,
+      };
+    }
+    if (fedAgency) filters.fedAgency = fedAgency;
+    if (serviceOn) filters.serviceOn = serviceOn;
+    if (routePrefix) filters.routePrefix = routePrefix;
 
-    if (designLoad) filters.designLoad = designLoad;
-
+    // Query database
     const bridges = await prisma.bridge.findMany({
       where: filters,
       select: {
         structureNumber: true,
-        stateCode: true,
+        location: true,
         yearBuilt: true,
-        functionalClass: true,
-        designLoad: true,
+        yearReconstructed: true,
+        fedAgency: true,
+        serviceOn: true,
+        routePrefix: true,
       },
     });
 

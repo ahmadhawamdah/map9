@@ -1,17 +1,27 @@
 "use client";
 
-import React, { useState } from "react";
-import { useRouter } from "next/navigation";
+import React, { useEffect, useState } from "react";
+import { useRouter, usePathname } from "next/navigation";
 import Dropdown from "@/ui/DropDown";
 
 const DashboardLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const router = useRouter();
+  const pathname = usePathname(); // Get the current route
 
   // Options for the dropdown
   const dashboardOptions = ["Bridge Dashboard", "Condition Dashboard"];
 
   // State to track the currently selected dashboard
-  const [selectedDashboard, setSelectedDashboard] = useState<string>("Bridge Dashboard");
+  const [selectedDashboard, setSelectedDashboard] = useState<string>("");
+
+  // Sync selectedDashboard with the current route
+  useEffect(() => {
+    if (pathname === "/bridge") {
+      setSelectedDashboard("Bridge Dashboard");
+    } else if (pathname === "/condition") {
+      setSelectedDashboard("Condition Dashboard");
+    }
+  }, [pathname]);
 
   // Handle dropdown selection
   const handleDashboardChange = (selectedOption: string) => {
@@ -27,8 +37,7 @@ const DashboardLayout: React.FC<{ children: React.ReactNode }> = ({ children }) 
     <div className="bg-gradient-to-r from-rose-100 to-teal-100 z-20">
       <div className="mt-5">
         <div className="container mx-auto flex justify-between items-center">
-
-          <h1 className="text-3xl font-bold  text-black">{selectedDashboard}</h1>
+          <h1 className="text-3xl font-bold text-black">{selectedDashboard}</h1>
 
           {/* Dropdown Component */}
           <Dropdown

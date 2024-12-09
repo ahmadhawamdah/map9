@@ -64,19 +64,19 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$serv
 const prisma = new __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$2840$prisma$2f$client$2c$__cjs$29$__["PrismaClient"]();
 async function DELETE() {
     try {
-        // Delete all rows from the specified table
-        await prisma.condition.deleteMany(); // Replace 'tableName' with your table name
+        // Drop the specified table
+        await prisma.$executeRawUnsafe(`DROP TABLE IF EXISTS "Structure";`); // Replace 'Structure' with your actual table name
         // Return a success response
         return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
-            message: "All data from the table has been deleted."
+            message: "The table has been dropped successfully."
         }, {
             status: 200
         });
     } catch (error) {
-        console.error("Error deleting table data:", error);
+        console.error("Error dropping the table:", error);
         // Return an error response
         return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
-            error: "Failed to delete data from the table."
+            error: "Failed to drop the table."
         }, {
             status: 500
         });

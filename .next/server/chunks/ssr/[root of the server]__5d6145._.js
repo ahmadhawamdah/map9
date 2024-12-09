@@ -47,9 +47,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 const Dropdown = ({ options, selected, onSelect, label })=>{
     const [isOpen, setIsOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
-    const [searchTerm, setSearchTerm] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(selected || "");
     const dropdownRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
-    const filteredOptions = options.filter((option)=>option.toLowerCase().includes(searchTerm.toLowerCase()));
     // Close dropdown when clicking outside
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         const handleClickOutside = (event)=>{
@@ -71,52 +69,48 @@ const Dropdown = ({ options, selected, onSelect, label })=>{
                 children: label
             }, void 0, false, {
                 fileName: "[project]/src/ui/DropDown.tsx",
-                lineNumber: 36,
+                lineNumber: 31,
                 columnNumber: 17
             }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                type: "text",
-                value: searchTerm,
-                onFocus: ()=>setIsOpen(true),
-                onChange: (e)=>setSearchTerm(e.target.value),
-                className: "w-full text-black px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-black focus:outline-none",
-                placeholder: "Select or search..."
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                onClick: ()=>setIsOpen((prev)=>!prev),
+                className: "w-full text-left px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-black focus:outline-none bg-white",
+                children: selected || "Select an option"
             }, void 0, false, {
                 fileName: "[project]/src/ui/DropDown.tsx",
-                lineNumber: 37,
+                lineNumber: 32,
                 columnNumber: 7
             }, this),
             isOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
                 className: "absolute w-full mt-1 bg-white border border-gray-300 rounded shadow-lg max-h-40 overflow-y-auto z-10",
-                children: filteredOptions.length > 0 ? filteredOptions.map((option, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                children: options.length > 0 ? options.map((option, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                         onClick: ()=>{
                             onSelect(option); // Select the option
-                            setSearchTerm(option); // Update input with the selected option
                             setIsOpen(false); // Close the dropdown
                         },
                         className: "px-4 py-2 text-black hover:bg-yellow-300 cursor-pointer",
                         children: option
                     }, index, false, {
                         fileName: "[project]/src/ui/DropDown.tsx",
-                        lineNumber: 49,
+                        lineNumber: 42,
                         columnNumber: 15
                     }, this)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                     className: "px-4 py-2 text-gray-500",
-                    children: "No options found"
+                    children: "No options available"
                 }, void 0, false, {
                     fileName: "[project]/src/ui/DropDown.tsx",
-                    lineNumber: 62,
+                    lineNumber: 54,
                     columnNumber: 13
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/ui/DropDown.tsx",
-                lineNumber: 46,
+                lineNumber: 39,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/ui/DropDown.tsx",
-        lineNumber: 35,
+        lineNumber: 30,
         columnNumber: 5
     }, this);
 };
@@ -141,13 +135,24 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$ui$2f$DropDown$2e$tsx
 ;
 const DashboardLayout = ({ children })=>{
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRouter"])();
+    const pathname = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["usePathname"])(); // Get the current route
     // Options for the dropdown
     const dashboardOptions = [
         "Bridge Dashboard",
         "Condition Dashboard"
     ];
     // State to track the currently selected dashboard
-    const [selectedDashboard, setSelectedDashboard] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("Bridge Dashboard");
+    const [selectedDashboard, setSelectedDashboard] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
+    // Sync selectedDashboard with the current route
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        if (pathname === "/bridge") {
+            setSelectedDashboard("Bridge Dashboard");
+        } else if (pathname === "/condition") {
+            setSelectedDashboard("Condition Dashboard");
+        }
+    }, [
+        pathname
+    ]);
     // Handle dropdown selection
     const handleDashboardChange = (selectedOption)=>{
         setSelectedDashboard(selectedOption); // Update the dashboard name
@@ -166,11 +171,11 @@ const DashboardLayout = ({ children })=>{
                     className: "container mx-auto flex justify-between items-center",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                            className: "text-3xl font-bold  text-black",
+                            className: "text-3xl font-bold text-black",
                             children: selectedDashboard
                         }, void 0, false, {
                             fileName: "[project]/src/app/(dashboard)/layout.tsx",
-                            lineNumber: 31,
+                            lineNumber: 40,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$ui$2f$DropDown$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -179,18 +184,18 @@ const DashboardLayout = ({ children })=>{
                             onSelect: handleDashboardChange
                         }, void 0, false, {
                             fileName: "[project]/src/app/(dashboard)/layout.tsx",
-                            lineNumber: 34,
+                            lineNumber: 43,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/(dashboard)/layout.tsx",
-                    lineNumber: 29,
+                    lineNumber: 39,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/(dashboard)/layout.tsx",
-                lineNumber: 28,
+                lineNumber: 38,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -198,13 +203,13 @@ const DashboardLayout = ({ children })=>{
                 children: children
             }, void 0, false, {
                 fileName: "[project]/src/app/(dashboard)/layout.tsx",
-                lineNumber: 41,
+                lineNumber: 50,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/(dashboard)/layout.tsx",
-        lineNumber: 27,
+        lineNumber: 37,
         columnNumber: 5
     }, this);
 };

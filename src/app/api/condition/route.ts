@@ -7,26 +7,53 @@ export async function POST(req: Request) {
     const body = await req.json();
 
     const {
-      deckCondition = "",
-      superstructureCondition = "",
-      culvertCondition = "",
-      structuralEval = "",
       bridgeCondition = "",
+      deckCond = "",
+      superstructureCond = "",
+      substructureCond = "",
+      channelCond = "",
+      culvertCond = "",
+      structuralEval = "",
+      deckGeometryEval = "",
+      underclearanceEval = "",
+      waterwayEval = "",
+      apprRoadEval = { min: 0, max: 0 },
+      postingEval = { min: 0, max: 0 },
       lowestRating = { min: 0, max: 0 },
     } = body;
 
-    // Initialize filters
+    // Initialize filters for Condition table
     const filters: any = {};
 
-    // Add conditions to filters
-    if (deckCondition) filters.deckCondition = deckCondition;
-    if (superstructureCondition)
-      filters.superstructureCondition = superstructureCondition;
-    if (culvertCondition) filters.culvertCondition = culvertCondition;
-    if (structuralEval) filters.structuralEval = structuralEval;
+    // Add string conditions to filters
     if (bridgeCondition) filters.bridgeCondition = bridgeCondition;
+    if (deckCond) filters.deckCond = deckCond;
+    if (superstructureCond) filters.superstructureCond = superstructureCond;
+    if (substructureCond) filters.substructureCond = substructureCond;
+    if (channelCond) filters.channelCond = channelCond;
+    if (culvertCond) filters.culvertCond = culvertCond;
+    if (structuralEval) filters.structuralEval = structuralEval;
+    if (deckGeometryEval) filters.deckGeometryEval = deckGeometryEval;
+    if (underclearanceEval) filters.underclearanceEval = underclearanceEval;
+    if (waterwayEval) filters.waterwayEval = waterwayEval;
 
-    // Add range filter for lowestRating
+    // Add range filters
+    if (apprRoadEval.min || apprRoadEval.max) {
+      filters.apprRoadEval = {
+        gte: apprRoadEval.min || undefined,
+        lte: apprRoadEval.max || undefined,
+      };
+    }
+
+    if (postingEval.min || postingEval.max) {
+      filters.postingEval = {
+        gte: postingEval.min || undefined,
+        lte: postingEval.max || undefined,
+      };
+    }
+    console.log(apprRoadEval);
+    console.log(postingEval);
+
     if (lowestRating.min || lowestRating.max) {
       filters.lowestRating = {
         gte: lowestRating.min || undefined,
@@ -34,20 +61,46 @@ export async function POST(req: Request) {
       };
     }
 
-    // Fetch filtered results
+    // Fetch filtered results with inner join on Bridge table
     const conditions = await prisma.condition.findMany({
       where: filters,
-      select: {
-        deckCondition: true,
-        superstructureCondition: true,
-        culvertCondition: true,
-        structuralEval: true,
-        bridgeCondition: true,
-        lowestRating: true,
+      include: {
+        Bridge: {
+          select: {
+            structureNumber: true,
+            lat: true,
+            long: true,
+            location: true,
+            yearBuilt: true,
+          },
+        },
       },
     });
 
-    return new Response(JSON.stringify(conditions), {
+    // Map results to include lat/long in top-level response
+    const results = conditions.map((condition) => ({
+      id: condition.id,
+      structureNumber: condition.structureNumber,
+      bridgeCondition: condition.bridgeCondition,
+      deckCond: condition.deckCond,
+      superstructureCond: condition.superstructureCond,
+      substructureCond: condition.substructureCond,
+      channelCond: condition.channelCond,
+      culvertCond: condition.culvertCond,
+      structuralEval: condition.structuralEval,
+      deckGeometryEval: condition.deckGeometryEval,
+      underclearanceEval: condition.underclearanceEval,
+      waterwayEval: condition.waterwayEval,
+      apprRoadEval: condition.apprRoadEval,
+      postingEval: condition.postingEval,
+      lowestRating: condition.lowestRating,
+      lat: condition.Bridge.lat,
+      long: condition.Bridge.long,
+      location: condition.Bridge.location,
+      yearBuilt: condition.Bridge.yearBuilt,
+    }));
+
+    return new Response(JSON.stringify(results), {
       status: 200,
       headers: { "Content-Type": "application/json" },
     });

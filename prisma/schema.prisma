@@ -11,59 +11,135 @@ datasource db {
 }
 
 model Bridge {
-  structureNumber   String      @id @unique
-  stateCode         Int
+  structureNumber   String @id @unique
   yearBuilt         Int
   yearReconstructed Int?
-  routePrefix       String
-  functionalClass   Int
-  designLoad        String?
-  conditions        Condition[] // One bridge can have many conditions
-  locations         Location[] // One bridge can have many locations
-  ownerships        Ownership[] // One bridge can have multiple owners
-  trafficDetails    Traffic[] // One bridge can have multiple traffic records
+  history           Int
+  serviceOn         Int
+  routePrefix       Int
+  location          String
+  fedAgency         String
+  lat               Int
+  long              Int
+
+  navigation  Navigation[]
+  conditon    Condition[]
+  geometry    Geometry[]
+  maintenance Maintenance[]
+  Structure   Structure[]
+}
+
+model Navigation {
+  id               String  @id @default(cuid())
+  structureNumber  String
+  direction        Int
+  trafficDirection Int
+  navigation       Int? // Changed to Int? to accommodate null values for "N"
+  toll             Boolean // Changed to Boolean to align with the boolean conversion in the push function
+  functionalClass  Int
+  detourKilos      Float
+  kilopoint        Float
+  trafficLanesOn   Int
+  trafficLanesUnd  Int
+  adt              Int
+  percentAdtTruck  Float? // Changed to Float? to handle potential null values
+  yearAdt          Int
+  futureAdt        Int
+  yearOfFutureAdt  Int
+  Bridge           Bridge  @relation(fields: [structureNumber], references: [structureNumber])
+
+  @@index([structureNumber]) // Index for faster lookups on structureNumber
 }
 
 model Condition {
-  id                      String  @id @default(cuid())
-  structureNumber         String
-  deckCondition           String
-  superstructureCondition String
-  substructureCondition   String
-  culvertCondition        String?
-  structuralEval          String
-  bridgeCondition         String
-  lowestRating            Int
-  Bridge                  Bridge  @relation(fields: [structureNumber], references: [structureNumber])
+  id                 String  @id @default(cuid()) // Unique identifier for the condition record
+  structureNumber    String // Foreign key referencing the Bridge model
+  bridgeCondition    String
+  deckCond           String
+  superstructureCond String
+  substructureCond   String
+  channelCond        String?
+  culvertCond        String?
+  structuralEval     String
+  deckGeometryEval   String
+  underclearanceEval String?
+  waterwayEval       String?
+  apprRoadEval       Int
+  postingEval        Int
+  lowestRating       Int
+
+  Bridge Bridge @relation(fields: [structureNumber], references: [structureNumber])
+
+  @@index([structureNumber]) // Index for faster lookups on structureNumber
 }
 
-model Location {
-  id              String @id @default(cuid())
-  structureNumber String
-  latitude        Float
-  longitude       Float
-  countyCode      Int
-  placeCode       Int
-  description     String
-  detourKilos     Int
-  Bridge          Bridge @relation(fields: [structureNumber], references: [structureNumber])
+model Maintenance {
+  id                  String  @id @default(cuid())
+  maintenance         Int
+  structureNumber     String
+  maintenanceType     Int
+  bridgeImprovement   Float?
+  roadwayImprovement  Float?
+  totalImprovement    Float?
+  yearOfImprovement   Float?
+  workProposed        Float?
+  inspectionFrequency Int
+  fractureCritical    String?
+  openClosedPosted    String
+
+  Bridge Bridge @relation(fields: [structureNumber], references: [structureNumber])
+
+  @@index([structureNumber])
 }
 
-model Ownership {
-  id              String @id @default(cuid())
-  structureNumber String
-  owner           Int
-  maintenance     Int
-  toll            Int
-  Bridge          Bridge @relation(fields: [structureNumber], references: [structureNumber])
+model Structure {
+  id                String @id @default(cuid())
+  structureNumber   String // Foreign key to Bridge model
+  apprKind          Int
+  structureKind     Int
+  structureType     Int
+  apprType          Int
+  mainUnitSpans     Int
+  apprSpans         Int
+  medianCode        Int
+  deckStructureType String
+  railings          Int?
+  transitions       Int?
+  apprRail          Int?
+  apprRailEnd       Int?
+  parallelStructure String
+
+  Bridge Bridge @relation(fields: [structureNumber], references: [structureNumber])
+
+  @@index([structureNumber])
 }
 
-model Traffic {
-  id              String @id @default(cuid())
-  structureNumber String
-  adt             Int
-  yearAdt         Int
-  futureAdt       Int
-  percentTruck    Int?
-  Bridge          Bridge @relation(fields: [structureNumber], references: [structureNumber])
+model Geometry {
+  id                String  @id @default(cuid())
+  structureNumber   String
+  minVertClearance  Float
+  apprWidth         Float
+  structureFlared   Int
+  navVertClearance  Float
+  navHorrClearance  Float
+  leftCurbWidth     Float
+  rightCurbWidth    Float
+  roadwayWidth      Float
+  deckWidth         Float
+  vertClearOver     Float
+  vertClearUnderRef String?
+  vertClearUnder    Float
+  latUnderRef       String?
+  latUnder          Float
+  leftLatUnder      Float
+  horrClearance     Float
+  deckArea          Float
+  maxSpanLength     Float
+  structureLength   Float
+  minNavClearance   Float
+  degreesSkew       Int
+
+  Bridge Bridge @relation(fields: [structureNumber], references: [structureNumber])
+
+  @@index([structureNumber])
 }

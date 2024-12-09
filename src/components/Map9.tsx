@@ -4,8 +4,10 @@ import Button from "@/ui/Button";
 import React, { useState } from "react";
 import BridgeList from "./BridgeList";
 import { Bridge, FilterBridgesParams, FilterConditionsParams } from "../../typing";
-import FilterBridges from "./filter-files/FilterBridges";
-import FilterConditions from "./filter-files/FilterConditions";
+import FilterCondition from "./filter-files/FilterCondition";
+import FilterBridge from "./filter-files/FilterBridge";
+import Mapbox from "./Mapbox";
+
 
 interface Map9Props {
   type: "bridge" | "condition";
@@ -14,6 +16,9 @@ interface Map9Props {
 }
 
 const Map9: React.FC<Map9Props> = ({ type, filterParams, handleFilterChange }) => {
+
+
+
   const [filteredResults, setFilteredResults] = useState<Bridge[]>([]);
   const [loading, setLoading] = useState(false);
 
@@ -47,12 +52,13 @@ const Map9: React.FC<Map9Props> = ({ type, filterParams, handleFilterChange }) =
       <div className="bg-white p-6 rounded-lg shadow-md mb-6">
         <h2 className="text-xl font-semibold mb-4 text-black">Filters</h2>
         {type === "bridge" ? (
-          <FilterBridges
+          <FilterBridge
+            
             filterParams={filterParams as FilterBridgesParams}
             handleFilterChange={handleFilterChange}
           />
         ) : (
-          <FilterConditions
+          <FilterCondition
             filterParams={filterParams as FilterConditionsParams}
             handleFilterChange={handleFilterChange}
           />
@@ -65,8 +71,10 @@ const Map9: React.FC<Map9Props> = ({ type, filterParams, handleFilterChange }) =
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <BridgeList bridges={filteredResults} />
+      <div className="flex flex-col h-screen w-full">
+        <Mapbox
+        />
+                <BridgeList bridges={filteredResults} />
       </div>
     </div>
   );
