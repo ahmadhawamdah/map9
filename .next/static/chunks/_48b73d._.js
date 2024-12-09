@@ -37,7 +37,7 @@ const Dropdown = ({ options, selected, onSelect, label })=>{
         }
     }["Dropdown.useEffect"], []);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "relative",
+        className: "relative z-30",
         ref: dropdownRef,
         children: [
             label && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -121,7 +121,7 @@ const DashboardLayout = ({ children })=>{
     _s();
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
     const pathname = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["usePathname"])(); // Get the current route
-    // Options for the dropdown
+    // Filtering options
     const dashboardOptions = [
         "Bridge Dashboard",
         "Condition Dashboard"
@@ -171,7 +171,7 @@ const DashboardLayout = ({ children })=>{
                             onSelect: handleDashboardChange
                         }, void 0, false, {
                             fileName: "[project]/src/app/(dashboard)/layout.tsx",
-                            lineNumber: 43,
+                            lineNumber: 42,
                             columnNumber: 11
                         }, this)
                     ]
@@ -190,7 +190,7 @@ const DashboardLayout = ({ children })=>{
                 children: children
             }, void 0, false, {
                 fileName: "[project]/src/app/(dashboard)/layout.tsx",
-                lineNumber: 50,
+                lineNumber: 49,
                 columnNumber: 7
             }, this)
         ]

@@ -1,5 +1,6 @@
 {
-  "/api/bridge/route": "app/api/bridge/route.js",
   "/(dashboard)/bridge/page": "app/(dashboard)/bridge/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js"
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/api/bridge/route": "app/api/bridge/route.js",
+  "/api/bridge-info/[structureNumber]/route": "app/api/bridge-info/[structureNumber]/route.js"
 }

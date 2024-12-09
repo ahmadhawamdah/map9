@@ -79,20 +79,20 @@ const FilterBridge: React.FC<FilterBridgesParams> = ({
       />
       <Dropdown
         label="Highway"
-        options={Object.values(highwayMap)} // Dropdown options
-        selected={highwayMap[String(filterParams.routePrefix)]} // Safely convert routePrefix to string
+        options={Object.values(highwayMap)} 
+        selected={highwayMap[String(filterParams.routePrefix)]} 
         onSelect={(value) => {
-          const selectedKey = reverseHighwayMap[value]; // Get key from value
+          const selectedKey = reverseHighwayMap[value]; 
           handleFilterChange("routePrefix", parseInt(selectedKey, 10)); // Parse key back to number
         }}
       />
       <Dropdown
         label="Service"
-        options={Object.values(serviceMap)} // Dropdown options
-        selected={serviceMap[String(filterParams.serviceOn)]} // Safely convert serviceOn to string
+        options={Object.values(serviceMap)}
+        selected={serviceMap[String(filterParams.serviceOn)]} 
         onSelect={(value) => {
-          const selectedKey = reverseServiceMap[value]; // Get key from value
-          handleFilterChange("serviceOn", parseInt(selectedKey, 10)); // Parse key back to number
+          const selectedKey = reverseServiceMap[value]; 
+          handleFilterChange("serviceOn", parseInt(selectedKey, 10)); 
         }}
       />
     </div>

@@ -13,6 +13,8 @@ export async function POST(req: Request) {
       fedAgency = "",
       serviceOn = 0,
       routePrefix = 0,
+      long = 0,
+      lat = 0,
     } = body;
 
     // Build filters dynamically
@@ -45,6 +47,8 @@ export async function POST(req: Request) {
         fedAgency: true,
         serviceOn: true,
         routePrefix: true,
+        long: true,
+        lat: true,
       },
     });
 

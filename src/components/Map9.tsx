@@ -3,10 +3,15 @@
 import Button from "@/ui/Button";
 import React, { useState } from "react";
 import BridgeList from "./BridgeList";
-import { Bridge, FilterBridgesParams, FilterConditionsParams } from "../../typing";
+import {
+  Bridge,
+  FilterBridgesParams,
+  FilterConditionsParams,
+} from "../../typing";
 import FilterCondition from "./filter-files/FilterCondition";
 import FilterBridge from "./filter-files/FilterBridge";
 import Mapbox from "./Mapbox";
+import BridgeCard from "./bridge-info/BridgeCard";
 
 
 interface Map9Props {
@@ -15,11 +20,13 @@ interface Map9Props {
   handleFilterChange: (key: string, value: any) => void;
 }
 
-const Map9: React.FC<Map9Props> = ({ type, filterParams, handleFilterChange }) => {
-
-
-
+const Map9: React.FC<Map9Props> = ({
+  type,
+  filterParams,
+  handleFilterChange,
+}) => {
   const [filteredResults, setFilteredResults] = useState<Bridge[]>([]);
+  const [selectedStructureNumber, setSelectedStructureNumber] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
   const handleApplyFilters = async () => {
@@ -53,7 +60,6 @@ const Map9: React.FC<Map9Props> = ({ type, filterParams, handleFilterChange }) =
         <h2 className="text-xl font-semibold mb-4 text-black">Filters</h2>
         {type === "bridge" ? (
           <FilterBridge
-            
             filterParams={filterParams as FilterBridgesParams}
             handleFilterChange={handleFilterChange}
           />
@@ -71,10 +77,15 @@ const Map9: React.FC<Map9Props> = ({ type, filterParams, handleFilterChange }) =
         </div>
       </div>
 
-      <div className="flex flex-col h-screen w-full">
-        <Mapbox
-        />
-                <BridgeList bridges={filteredResults} />
+      <div className="flex h-full">
+        <Mapbox bridges={filteredResults} />
+        <BridgeList bridges={filteredResults} setSelectedStructureNumber={setSelectedStructureNumber} />
+        {selectedStructureNumber && (
+          <BridgeCard
+            structureNumber={selectedStructureNumber}
+            setSelectedStructureNumber={setSelectedStructureNumber}
+          />
+        )}
       </div>
     </div>
   );

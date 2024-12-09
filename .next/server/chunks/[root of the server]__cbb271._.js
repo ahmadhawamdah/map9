@@ -68,7 +68,7 @@ async function POST(req) {
         }, yearReconstructed = {
             min: 0,
             max: 2024
-        }, fedAgency = "", serviceOn = 0, routePrefix = 0 } = body;
+        }, fedAgency = "", serviceOn = 0, routePrefix = 0, long = 0, lat = 0 } = body;
         // Build filters dynamically
         const filters = {};
         if (location) filters.stateCode = parseInt(location, 10);
@@ -97,7 +97,9 @@ async function POST(req) {
                 yearReconstructed: true,
                 fedAgency: true,
                 serviceOn: true,
-                routePrefix: true
+                routePrefix: true,
+                long: true,
+                lat: true
             }
         });
         return new Response(JSON.stringify(bridges), {

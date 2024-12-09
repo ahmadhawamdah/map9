@@ -73,15 +73,15 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$trimQuotes$2
 ;
 const BridgeList = ({ bridges })=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "p-4 bg-white shadow-md rounded-md space-y-4 text-black",
+        className: "p-5 pt-0 h-screen overflow-y-auto min-w-[300px] bg-white shadow-md rounded-md space-y-4 text-black",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                className: "text-xl font-semibold",
+                className: "text-xl font-semibold sticky top-0 bg-white z-10 p-5 border-b border-b-gray-500",
                 children: "Bridges List"
             }, void 0, false, {
                 fileName: "[project]/src/components/BridgeList.tsx",
                 lineNumber: 13,
-                columnNumber: 7
+                columnNumber: 9
             }, this),
             bridges.map((bridge)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "border p-2 rounded-md  hover:scale-105 transition-all ease-in-out cursor-pointer",
@@ -599,7 +599,7 @@ const FilterBridge = ({ filterParams, handleFilterChange })=>{
                 options: Object.values(highwayMap),
                 selected: highwayMap[String(filterParams.routePrefix)],
                 onSelect: (value)=>{
-                    const selectedKey = reverseHighwayMap[value]; // Get key from value
+                    const selectedKey = reverseHighwayMap[value];
                     handleFilterChange("routePrefix", parseInt(selectedKey, 10)); // Parse key back to number
                 }
             }, void 0, false, {
@@ -612,8 +612,8 @@ const FilterBridge = ({ filterParams, handleFilterChange })=>{
                 options: Object.values(serviceMap),
                 selected: serviceMap[String(filterParams.serviceOn)],
                 onSelect: (value)=>{
-                    const selectedKey = reverseServiceMap[value]; // Get key from value
-                    handleFilterChange("serviceOn", parseInt(selectedKey, 10)); // Parse key back to number
+                    const selectedKey = reverseServiceMap[value];
+                    handleFilterChange("serviceOn", parseInt(selectedKey, 10));
                 }
             }, void 0, false, {
                 fileName: "[project]/src/components/filter-files/FilterBridge.tsx",
@@ -635,16 +635,25 @@ const __TURBOPACK__default__export__ = FilterBridge;
 var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, x: __turbopack_external_require__, y: __turbopack_external_import__, z: require } = __turbopack_context__;
 {
 __turbopack_esm__({
-    "default": (()=>Mapbox)
+    "default": (()=>__TURBOPACK__default__export__)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$map$2d$gl$2f$dist$2f$esm$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$module__evaluation$3e$__ = __turbopack_import__("[project]/node_modules/react-map-gl/dist/esm/index.js [app-ssr] (ecmascript) <module evaluation>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$geoConversion$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/utils/geoConversion.ts [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$map$2d$gl$2f$dist$2f$esm$2f$exports$2d$mapbox$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_import__("[project]/node_modules/react-map-gl/dist/esm/exports-mapbox.js [app-ssr] (ecmascript) <locals>");
 ;
 ;
-function Mapbox() {
+;
+;
+;
+/*
+Resources:
+https://visgl.github.io/react-map-gl/docs/api-reference/popup
+*/ const Mapbox = ({ bridges })=>{
+    const [showPopup, setShowPopup] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(true);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: " flex flex-grow h-full p-4 bg-white shadow-md rounded-md space-y-4 text-black",
+        className: "flex h-screen flex-grow w-full p-4 bg-white shadow-md rounded-md",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$map$2d$gl$2f$dist$2f$esm$2f$exports$2d$mapbox$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$locals$3e$__["Map"], {
             mapboxAccessToken: ("TURBOPACK compile-time value", "pk.eyJ1IjoiYWhtYWRoYXdhbWRhaCIsImEiOiJjbTRidmltcDYwNGVvMmpwc3k0YnpkNXUwIn0.F-9_tsy0z7DuM2mD2BBPow"),
             initialViewState: {
@@ -652,19 +661,36 @@ function Mapbox() {
                 latitude: 40.44,
                 zoom: 10
             },
-            // style={{width: 600, height: 400}}
-            mapStyle: "mapbox://styles/ahmadhawamdah/cm4g9ldnm008m01ra7osc4t0w"
+            mapStyle: "mapbox://styles/ahmadhawamdah/cm4g9ldnm008m01ra7osc4t0w",
+            children: bridges?.map((bridge, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    children: showPopup && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$map$2d$gl$2f$dist$2f$esm$2f$exports$2d$mapbox$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$locals$3e$__["Popup"], {
+                        longitude: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$geoConversion$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["convertLongitude"])(bridge.long),
+                        latitude: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$geoConversion$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["convertLatitude"])(bridge.lat),
+                        anchor: "bottom",
+                        onClose: ()=>setShowPopup(false),
+                        children: "You are here"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/Mapbox.tsx",
+                        lineNumber: 41,
+                        columnNumber: 13
+                    }, this)
+                }, void 0, false, {
+                    fileName: "[project]/src/components/Mapbox.tsx",
+                    lineNumber: 30,
+                    columnNumber: 11
+                }, this))
         }, void 0, false, {
             fileName: "[project]/src/components/Mapbox.tsx",
-            lineNumber: 7,
-            columnNumber: 5
+            lineNumber: 20,
+            columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/Mapbox.tsx",
-        lineNumber: 6,
+        lineNumber: 19,
         columnNumber: 5
     }, this);
-}
+};
+const __TURBOPACK__default__export__ = Mapbox;
 }}),
 "[project]/src/components/Map9.tsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
@@ -723,7 +749,7 @@ const Map9 = ({ type, filterParams, handleFilterChange })=>{
                         children: "Filters"
                     }, void 0, false, {
                         fileName: "[project]/src/components/Map9.tsx",
-                        lineNumber: 53,
+                        lineNumber: 57,
                         columnNumber: 9
                     }, this),
                     type === "bridge" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$filter$2d$files$2f$FilterBridge$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -731,14 +757,14 @@ const Map9 = ({ type, filterParams, handleFilterChange })=>{
                         handleFilterChange: handleFilterChange
                     }, void 0, false, {
                         fileName: "[project]/src/components/Map9.tsx",
-                        lineNumber: 55,
+                        lineNumber: 59,
                         columnNumber: 11
                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$filter$2d$files$2f$FilterCondition$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                         filterParams: filterParams,
                         handleFilterChange: handleFilterChange
                     }, void 0, false, {
                         fileName: "[project]/src/components/Map9.tsx",
-                        lineNumber: 61,
+                        lineNumber: 64,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -748,45 +774,47 @@ const Map9 = ({ type, filterParams, handleFilterChange })=>{
                             label: loading ? "Loading..." : "Apply Filters"
                         }, void 0, false, {
                             fileName: "[project]/src/components/Map9.tsx",
-                            lineNumber: 67,
+                            lineNumber: 70,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/Map9.tsx",
-                        lineNumber: 66,
+                        lineNumber: 69,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/Map9.tsx",
-                lineNumber: 52,
+                lineNumber: 56,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex flex-col h-screen w-full",
+                className: "flex h-full",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Mapbox$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Mapbox$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                        bridges: filteredResults
+                    }, void 0, false, {
                         fileName: "[project]/src/components/Map9.tsx",
-                        lineNumber: 75,
+                        lineNumber: 78,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$BridgeList$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                         bridges: filteredResults
                     }, void 0, false, {
                         fileName: "[project]/src/components/Map9.tsx",
-                        lineNumber: 77,
-                        columnNumber: 17
+                        lineNumber: 79,
+                        columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/Map9.tsx",
-                lineNumber: 74,
+                lineNumber: 77,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/Map9.tsx",
-        lineNumber: 51,
+        lineNumber: 55,
         columnNumber: 5
     }, this);
 };

@@ -8,7 +8,7 @@ const DashboardLayout: React.FC<{ children: React.ReactNode }> = ({ children }) 
   const router = useRouter();
   const pathname = usePathname(); // Get the current route
 
-  // Options for the dropdown
+  // Filtering options
   const dashboardOptions = ["Bridge Dashboard", "Condition Dashboard"];
 
   // State to track the currently selected dashboard
@@ -39,10 +39,9 @@ const DashboardLayout: React.FC<{ children: React.ReactNode }> = ({ children }) 
         <div className="container mx-auto flex justify-between items-center">
           <h1 className="text-3xl font-bold text-black">{selectedDashboard}</h1>
 
-          {/* Dropdown Component */}
           <Dropdown
             options={dashboardOptions}
-            selected={selectedDashboard} // Use selectedDashboard as the current selection
+            selected={selectedDashboard} 
             onSelect={handleDashboardChange}
           />
         </div>

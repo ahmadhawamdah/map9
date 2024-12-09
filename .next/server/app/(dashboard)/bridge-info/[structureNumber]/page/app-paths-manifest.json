@@ -1,0 +1,3 @@
+{
+  "/(dashboard)/bridge-info/[structureNumber]/page": "app/(dashboard)/bridge-info/[structureNumber]/page.js"
+}
