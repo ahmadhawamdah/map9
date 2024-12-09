@@ -7,7 +7,7 @@ export async function GET(
   req: Request,
   context: { params: { [key: string]: string } }
 ) {
-  const { structureNumber } = context.params;
+  const { structureNumber } = await context.params;
 
   if (!structureNumber) {
     return NextResponse.json(
