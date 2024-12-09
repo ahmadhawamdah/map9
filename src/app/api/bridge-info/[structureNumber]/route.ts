@@ -5,9 +5,9 @@ const prisma = new PrismaClient();
 
 export async function GET(
   req: Request,
-  { params }: { params: { structureNumber: string } }
+  context: { params: { [key: string]: string } }
 ) {
-  const { structureNumber } = await params;
+  const { structureNumber } = context.params;
 
   if (!structureNumber) {
     return NextResponse.json(

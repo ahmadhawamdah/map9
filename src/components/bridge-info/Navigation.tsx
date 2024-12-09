@@ -1,5 +1,5 @@
 import React from "react";
-import { directionMap, functionalClassificationMap, tollMap } from "../NBIHashmaps";
+import { directionMap, functionalClassificationMap, navigationMap, tollMap } from "../NBIHashmaps";
 
 const Navigation = ({ navigation }: { navigation: any }) => {
   return (
@@ -9,7 +9,7 @@ const Navigation = ({ navigation }: { navigation: any }) => {
       <p className="text-sm">Traffic Lanes On: {navigation[0].trafficLanesOn}</p>
       <p className="text-sm">Traffic Lanes Under: {navigation[0].trafficLanesUnd || "N/A"}</p>
       <p className="text-sm">Traffic Direction: {navigation[0].trafficDirection}</p>
-      <p className="text-sm">Navigation: {navigation[0].navigation || "N/A"}</p>
+      <p className="text-sm">Navigation: {navigationMap[navigation[0].navigation] || "N/A"}</p>
       <p className="text-sm">Toll: {tollMap[navigation[0].toll] ? "Yes" : "No"}</p>
       <p className="text-sm">Functional Class: {functionalClassificationMap[navigation[0].functionalClass]}</p>
       <p className="text-sm">Detour: {navigation[0].detourKilos || "N/A"} kilos</p>

@@ -34,8 +34,17 @@ const historicStatusMap: { [code: number]: string } = {
 export { historicStatusMap, highwayMap, serviceMap };
 
 // Navigaion
-const directionMap: { [code: string]: string } = {
-  N: "Not applicable, no waterway.",
+const directionMap: { [code: number]: string } = {
+    0: "Not applicable",
+    1: "North",
+    2: "East",
+    3: "South",
+    4: "West"
+  };
+
+  
+const navigationMap: { [code: string]: string } = {
+  "N": "Not applicable, no waterway.",
   "0": "No navigation control on waterway (bridge permit not required).",
   "1": "Navigation control present on waterway.",
 };
@@ -61,7 +70,7 @@ const functionalClassificationMap: { [code: number]: string } = {
   19: "Local (Urban)",
 };
 
-export { directionMap, tollMap, functionalClassificationMap };
+export { directionMap, tollMap, functionalClassificationMap, navigationMap };
 
 //Condition
 const conditionMap: Record<number | string, string> = {

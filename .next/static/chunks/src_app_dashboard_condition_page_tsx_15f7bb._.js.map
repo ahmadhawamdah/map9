@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///Users/ahmadhawamdah/Documents/map9/src/app/dashboard/condition/page.tsx"],"sourcesContent":["\"use client\";\n\nimport Map9 from \"@/components/Map9\";\n\nconst ConditionDashboard: React.FC = () => {\n  return (\n    <div>\n      <h1 className=\"text-3xl font-bold mb-6 text-black\">Conditions Dashboard</h1>\n      <Map9 type=\"condition\" /> {/* Pass type as \"condition\" */}\n    </div>\n  );\n};\n\nexport default ConditionDashboard;\n"],"names":[],"mappings":";;;;AAEA;AAFA;;;AAIA,MAAM,qBAA+B;IACnC,qBACE,6LAAC;;0BACC,6LAAC;gBAAG,WAAU;0BAAqC;;;;;;0BACnD,6LAAC,6HAAA,CAAA,UAAI;gBAAC,MAAK;;;;;;YAAc;;;;;;;AAG/B;KAPM;uCASS"}},
-    {"offset": {"line": 48, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
-}

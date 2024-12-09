@@ -13,7 +13,7 @@ import { convertLatitude, convertLongitude } from "@/utils/geoConversion";
 import { highwayMap, historicStatusMap, serviceMap } from "../NBIHashmaps";
 
 interface BridgeCardProps {
-  structureNumber: string | null; // The selected structure number
+  structureNumber: string; // The selected structure number
   setSelectedStructureNumber: (value: string | null) => void;
 }
 
@@ -31,7 +31,7 @@ const BridgeCard: React.FC<BridgeCardProps> = ({
     const fetchBridgeData = async () => {
       setLoading(true);
       setError(null);
-
+      structureNumber = structureNumber.toString()
       try {
         const res = await fetch(`/api/bridge-info/${structureNumber}`);
         if (!res.ok) {
