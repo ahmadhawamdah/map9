@@ -85,15 +85,15 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$trimQuotes$2
 ;
 const BridgeList = ({ bridges, setSelectedStructureNumber })=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "p-5 pt-0 h-screen overflow-y-auto min-w-[300px] bg-white shadow-md rounded-md space-y-4 text-black",
+        className: "p-5 pt-0 h-screen overflow-y-auto min-w-[270px] bg-white shadow-md rounded-md space-y-4 text-black",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                 className: "text-xl font-semibold sticky top-0 bg-white z-10 p-5 border-b border-b-gray-500 w-full",
                 children: "Bridges List"
             }, void 0, false, {
                 fileName: "[project]/src/components/BridgeList.tsx",
-                lineNumber: 15,
-                columnNumber: 9
+                lineNumber: 17,
+                columnNumber: 7
             }, this),
             bridges && bridges.length > 0 ? bridges.map((bridge)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     onClick: ()=>setSelectedStructureNumber(bridge.structureNumber),
@@ -107,15 +107,15 @@ const BridgeList = ({ bridges, setSelectedStructureNumber })=>{
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/BridgeList.tsx",
-                            lineNumber: 24,
-                            columnNumber: 7
+                            lineNumber: 28,
+                            columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                             children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$trimQuotes$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["trimQuotes"])(bridge.location)
                         }, void 0, false, {
                             fileName: "[project]/src/components/BridgeList.tsx",
-                            lineNumber: 25,
-                            columnNumber: 7
+                            lineNumber: 31,
+                            columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                             children: [
@@ -124,26 +124,26 @@ const BridgeList = ({ bridges, setSelectedStructureNumber })=>{
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/BridgeList.tsx",
-                            lineNumber: 26,
-                            columnNumber: 7
+                            lineNumber: 32,
+                            columnNumber: 13
                         }, this)
                     ]
                 }, bridge.structureNumber, true, {
                     fileName: "[project]/src/components/BridgeList.tsx",
-                    lineNumber: 19,
-                    columnNumber: 5
+                    lineNumber: 23,
+                    columnNumber: 11
                 }, this)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                 className: "text-base text-gray-800",
                 children: 'Click on "Apply Filters" to start'
             }, void 0, false, {
                 fileName: "[project]/src/components/BridgeList.tsx",
-                lineNumber: 30,
-                columnNumber: 3
+                lineNumber: 36,
+                columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/BridgeList.tsx",
-        lineNumber: 14,
+        lineNumber: 16,
         columnNumber: 5
     }, this);
 };
@@ -561,36 +561,16 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$ui$2f$TextInput$2e$ts
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$ui$2f$DropDown$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/ui/DropDown.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$ui$2f$RangeInput$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/ui/RangeInput.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$reverseMap$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/utils/reverseMap.ts [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$NBIHashmaps$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/components/NBIHashmaps.tsx [app-client] (ecmascript)");
 ;
 ;
 ;
 ;
 ;
-const serviceMap = {
-    "1": "Highway, with or without pedestrian",
-    "2": "Railroad",
-    "3": "Pedestrian-bicycle",
-    "4": "Highway-railroad",
-    "5": "Waterway",
-    "6": "Highway-waterway",
-    "7": "Railroad-waterway",
-    "8": "Highway-waterway-railroad",
-    "9": "Relief for waterway",
-    "0": "Other"
-};
-const highwayMap = {
-    "1": "Interstate highway",
-    "2": "U.S. numbered highway",
-    "3": "State highway",
-    "4": "County highway",
-    "5": "City street",
-    "6": "Federal lands road",
-    "7": "State lands road",
-    "8": "Other (include toll roads not otherwise)"
-};
+;
 const FilterBridge = ({ filterParams, handleFilterChange })=>{
-    const reverseServiceMap = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$reverseMap$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["reverseMap"])(serviceMap);
-    const reverseHighwayMap = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$reverseMap$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["reverseMap"])(highwayMap);
+    const reverseServiceMap = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$reverseMap$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["reverseMap"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$NBIHashmaps$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["serviceMap"]);
+    const reverseHighwayMap = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$reverseMap$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["reverseMap"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$NBIHashmaps$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["highwayMap"]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "grid grid-cols-3 gap-4",
         children: [
@@ -601,7 +581,7 @@ const FilterBridge = ({ filterParams, handleFilterChange })=>{
                 onChange: (e)=>handleFilterChange("stateCode", e.target.value)
             }, void 0, false, {
                 fileName: "[project]/src/components/filter-files/FilterBridge.tsx",
-                lineNumber: 52,
+                lineNumber: 31,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$ui$2f$RangeInput$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -612,7 +592,7 @@ const FilterBridge = ({ filterParams, handleFilterChange })=>{
                 max: 2021
             }, void 0, false, {
                 fileName: "[project]/src/components/filter-files/FilterBridge.tsx",
-                lineNumber: 58,
+                lineNumber: 37,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$ui$2f$RangeInput$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -623,7 +603,7 @@ const FilterBridge = ({ filterParams, handleFilterChange })=>{
                 max: 2021
             }, void 0, false, {
                 fileName: "[project]/src/components/filter-files/FilterBridge.tsx",
-                lineNumber: 65,
+                lineNumber: 44,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$ui$2f$DropDown$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -638,39 +618,39 @@ const FilterBridge = ({ filterParams, handleFilterChange })=>{
                 }
             }, void 0, false, {
                 fileName: "[project]/src/components/filter-files/FilterBridge.tsx",
-                lineNumber: 72,
+                lineNumber: 51,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$ui$2f$DropDown$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                 label: "Highway",
-                options: Object.values(highwayMap),
-                selected: highwayMap[String(filterParams.routePrefix)],
+                options: Object.values(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$NBIHashmaps$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["highwayMap"]),
+                selected: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$NBIHashmaps$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["highwayMap"][String(filterParams.routePrefix)],
                 onSelect: (value)=>{
                     const selectedKey = reverseHighwayMap[value];
                     handleFilterChange("routePrefix", parseInt(selectedKey, 10)); // Parse key back to number
                 }
             }, void 0, false, {
                 fileName: "[project]/src/components/filter-files/FilterBridge.tsx",
-                lineNumber: 80,
+                lineNumber: 59,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$ui$2f$DropDown$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                 label: "Service",
-                options: Object.values(serviceMap),
-                selected: serviceMap[String(filterParams.serviceOn)],
+                options: Object.values(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$NBIHashmaps$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["serviceMap"]),
+                selected: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$NBIHashmaps$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["serviceMap"][String(filterParams.serviceOn)],
                 onSelect: (value)=>{
                     const selectedKey = reverseServiceMap[value];
                     handleFilterChange("serviceOn", parseInt(selectedKey, 10));
                 }
             }, void 0, false, {
                 fileName: "[project]/src/components/filter-files/FilterBridge.tsx",
-                lineNumber: 89,
+                lineNumber: 68,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/filter-files/FilterBridge.tsx",
-        lineNumber: 51,
+        lineNumber: 30,
         columnNumber: 5
     }, this);
 };
@@ -901,266 +881,168 @@ const Navigation = ({ navigation })=>{
             }, void 0, false, {
                 fileName: "[project]/src/components/bridge-info/Navigation.tsx",
                 lineNumber: 6,
-                columnNumber: 3
+                columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Direction:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Navigation.tsx",
-                        lineNumber: 8,
-                        columnNumber: 5
-                    }, this),
-                    " ",
+                    "Direction: ",
                     navigation[0].direction
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/bridge-info/Navigation.tsx",
                 lineNumber: 7,
-                columnNumber: 3
+                columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Traffic Lanes On:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Navigation.tsx",
-                        lineNumber: 11,
-                        columnNumber: 5
-                    }, this),
-                    " ",
+                    "Traffic Lanes On: ",
                     navigation[0].trafficLanesOn
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/bridge-info/Navigation.tsx",
-                lineNumber: 10,
-                columnNumber: 3
+                lineNumber: 8,
+                columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Traffic Lanes Under:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Navigation.tsx",
-                        lineNumber: 14,
-                        columnNumber: 5
-                    }, this),
-                    " ",
+                    "Traffic Lanes Under: ",
                     navigation[0].trafficLanesUnd || "N/A"
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/bridge-info/Navigation.tsx",
-                lineNumber: 13,
-                columnNumber: 3
+                lineNumber: 9,
+                columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Traffic Direction:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Navigation.tsx",
-                        lineNumber: 17,
-                        columnNumber: 5
-                    }, this),
-                    " ",
+                    "Traffic Direction: ",
                     navigation[0].trafficDirection
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/bridge-info/Navigation.tsx",
-                lineNumber: 16,
-                columnNumber: 3
+                lineNumber: 10,
+                columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Navigation:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Navigation.tsx",
-                        lineNumber: 20,
-                        columnNumber: 5
-                    }, this),
-                    " ",
+                    "Navigation: ",
                     navigation[0].navigation || "N/A"
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/bridge-info/Navigation.tsx",
-                lineNumber: 19,
-                columnNumber: 3
+                lineNumber: 11,
+                columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Toll:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Navigation.tsx",
-                        lineNumber: 23,
-                        columnNumber: 5
-                    }, this),
-                    " ",
+                    "Toll: ",
                     navigation[0].toll ? "Yes" : "No"
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/bridge-info/Navigation.tsx",
-                lineNumber: 22,
-                columnNumber: 3
+                lineNumber: 12,
+                columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Functional Class:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Navigation.tsx",
-                        lineNumber: 26,
-                        columnNumber: 5
-                    }, this),
-                    " ",
+                    "Functional Class: ",
                     navigation[0].functionalClass
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/bridge-info/Navigation.tsx",
-                lineNumber: 25,
-                columnNumber: 3
+                lineNumber: 13,
+                columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Detour Kilos:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Navigation.tsx",
-                        lineNumber: 29,
-                        columnNumber: 5
-                    }, this),
-                    " ",
+                    "Detour Kilos: ",
                     navigation[0].detourKilos || "N/A"
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/bridge-info/Navigation.tsx",
-                lineNumber: 28,
-                columnNumber: 3
+                lineNumber: 14,
+                columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Kilopoint:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Navigation.tsx",
-                        lineNumber: 32,
-                        columnNumber: 5
-                    }, this),
-                    " ",
+                    "Kilopoint: ",
                     navigation[0].kilopoint || "N/A"
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/bridge-info/Navigation.tsx",
-                lineNumber: 31,
-                columnNumber: 3
+                lineNumber: 15,
+                columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "ADT (Average Daily Traffic):"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Navigation.tsx",
-                        lineNumber: 35,
-                        columnNumber: 5
-                    }, this),
-                    " ",
+                    "ADT (Average Daily Traffic): ",
                     navigation[0].adt
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/bridge-info/Navigation.tsx",
-                lineNumber: 34,
-                columnNumber: 3
+                lineNumber: 16,
+                columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Percent ADT Truck:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Navigation.tsx",
-                        lineNumber: 38,
-                        columnNumber: 5
-                    }, this),
-                    " ",
+                    "Percent ADT Truck: ",
                     navigation[0].percentAdtTruck || "N/A",
                     "%"
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/bridge-info/Navigation.tsx",
-                lineNumber: 37,
-                columnNumber: 3
+                lineNumber: 17,
+                columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Year ADT:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Navigation.tsx",
-                        lineNumber: 41,
-                        columnNumber: 5
-                    }, this),
-                    " ",
+                    "Year ADT: ",
                     navigation[0].yearAdt
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/bridge-info/Navigation.tsx",
-                lineNumber: 40,
-                columnNumber: 3
+                lineNumber: 20,
+                columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Future ADT:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Navigation.tsx",
-                        lineNumber: 44,
-                        columnNumber: 5
-                    }, this),
-                    " ",
+                    "Future ADT: ",
                     navigation[0].futureAdt
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/bridge-info/Navigation.tsx",
-                lineNumber: 43,
-                columnNumber: 3
+                lineNumber: 21,
+                columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Year of Future ADT:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Navigation.tsx",
-                        lineNumber: 47,
-                        columnNumber: 5
-                    }, this),
-                    " ",
+                    "Year of Future ADT: ",
                     navigation[0].yearOfFutureAdt
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/bridge-info/Navigation.tsx",
-                lineNumber: 46,
-                columnNumber: 3
+                lineNumber: 22,
+                columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/bridge-info/Navigation.tsx",
         lineNumber: 5,
-        columnNumber: 1
+        columnNumber: 5
     }, this);
 };
 _c = Navigation;
@@ -1193,16 +1075,9 @@ const Condition = ({ condition })=>{
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Bridge Condition:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Condition.tsx",
-                        lineNumber: 8,
-                        columnNumber: 9
-                    }, this),
-                    " ",
+                    "Bridge Condition: ",
                     condition[0].bridgeCondition
                 ]
             }, void 0, true, {
@@ -1211,75 +1086,47 @@ const Condition = ({ condition })=>{
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Deck Condition:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Condition.tsx",
-                        lineNumber: 12,
-                        columnNumber: 9
-                    }, this),
-                    " ",
+                    "Deck Condition: ",
                     condition[0].deckCond
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/bridge-info/Condition.tsx",
-                lineNumber: 11,
+                lineNumber: 10,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Superstructure Condition:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Condition.tsx",
-                        lineNumber: 16,
-                        columnNumber: 9
-                    }, this),
-                    " ",
+                    "Superstructure Condition: ",
                     condition[0].superstructureCond
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/bridge-info/Condition.tsx",
-                lineNumber: 15,
+                lineNumber: 13,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Substructure Condition:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Condition.tsx",
-                        lineNumber: 20,
-                        columnNumber: 9
-                    }, this),
-                    " ",
+                    "Substructure Condition: ",
                     condition[0].substructureCond
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/bridge-info/Condition.tsx",
-                lineNumber: 19,
+                lineNumber: 16,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Channel Condition:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Condition.tsx",
-                        lineNumber: 24,
-                        columnNumber: 9
-                    }, this),
-                    " ",
+                    "Channel Condition: ",
                     condition[0].channelCond || "N/A"
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/bridge-info/Condition.tsx",
-                lineNumber: 23,
+                lineNumber: 19,
                 columnNumber: 7
             }, this)
         ]
@@ -1315,57 +1162,47 @@ const Maintenance = ({ maintenance })=>{
                 children: "Maintenance"
             }, void 0, false, {
                 fileName: "[project]/src/components/bridge-info/Maintenance.tsx",
-                lineNumber: 7,
+                lineNumber: 6,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Maintenance Type:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Maintenance.tsx",
-                        lineNumber: 9,
-                        columnNumber: 9
-                    }, this),
-                    " ",
+                    "Maintenance Type: ",
                     maintenance[0].maintenanceType
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/bridge-info/Maintenance.tsx",
-                lineNumber: 8,
+                lineNumber: 7,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Bridge Improvement:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Maintenance.tsx",
-                        lineNumber: 13,
-                        columnNumber: 9
-                    }, this),
-                    " ",
+                    "Bridge Improvement: ",
                     maintenance[0].bridgeImprovement || "N/A"
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/bridge-info/Maintenance.tsx",
-                lineNumber: 12,
+                lineNumber: 10,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Roadway Improvement:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Maintenance.tsx",
-                        lineNumber: 17,
-                        columnNumber: 9
-                    }, this),
-                    " ",
+                    "Roadway Improvement: ",
                     maintenance[0].roadwayImprovement || "N/A"
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/bridge-info/Maintenance.tsx",
+                lineNumber: 13,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
+                children: [
+                    "Total Improvement: ",
+                    maintenance[0].totalImprovement || "N/A"
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/bridge-info/Maintenance.tsx",
@@ -1373,53 +1210,43 @@ const Maintenance = ({ maintenance })=>{
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Total Improvement:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Maintenance.tsx",
-                        lineNumber: 21,
-                        columnNumber: 9
-                    }, this),
-                    " ",
-                    maintenance[0].totalImprovement || "N/A"
-                ]
-            }, void 0, true, {
-                fileName: "[project]/src/components/bridge-info/Maintenance.tsx",
-                lineNumber: 20,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Year of Improvement:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Maintenance.tsx",
-                        lineNumber: 25,
-                        columnNumber: 9
-                    }, this),
-                    " ",
+                    "Year of Improvement: ",
                     maintenance[0].yearOfImprovement || "N/A"
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/bridge-info/Maintenance.tsx",
-                lineNumber: 24,
+                lineNumber: 19,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Work Proposed:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Maintenance.tsx",
-                        lineNumber: 29,
-                        columnNumber: 9
-                    }, this),
-                    " ",
+                    "Work Proposed: ",
                     maintenance[0].workProposed || "N/A"
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/bridge-info/Maintenance.tsx",
+                lineNumber: 22,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
+                children: [
+                    "Inspection Frequency: ",
+                    maintenance[0].inspectionFrequency
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/bridge-info/Maintenance.tsx",
+                lineNumber: 25,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
+                children: [
+                    "Fracture Critical: ",
+                    maintenance[0].fractureCritical || "N/A"
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/bridge-info/Maintenance.tsx",
@@ -1427,63 +1254,20 @@ const Maintenance = ({ maintenance })=>{
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Inspection Frequency:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Maintenance.tsx",
-                        lineNumber: 33,
-                        columnNumber: 9
-                    }, this),
-                    " ",
-                    maintenance[0].inspectionFrequency
-                ]
-            }, void 0, true, {
-                fileName: "[project]/src/components/bridge-info/Maintenance.tsx",
-                lineNumber: 32,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Fracture Critical:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Maintenance.tsx",
-                        lineNumber: 37,
-                        columnNumber: 9
-                    }, this),
-                    " ",
-                    maintenance[0].fractureCritical || "N/A"
-                ]
-            }, void 0, true, {
-                fileName: "[project]/src/components/bridge-info/Maintenance.tsx",
-                lineNumber: 36,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Open/Closed/Posted:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Maintenance.tsx",
-                        lineNumber: 41,
-                        columnNumber: 9
-                    }, this),
-                    " ",
+                    "Open/Closed/Posted: ",
                     maintenance[0].openClosedPosted
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/bridge-info/Maintenance.tsx",
-                lineNumber: 40,
+                lineNumber: 31,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/bridge-info/Maintenance.tsx",
-        lineNumber: 6,
+        lineNumber: 5,
         columnNumber: 5
     }, this);
 };
@@ -1517,16 +1301,9 @@ const Geometry = ({ geometry })=>{
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Structure Length:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Geometry.tsx",
-                        lineNumber: 8,
-                        columnNumber: 9
-                    }, this),
-                    " ",
+                    "Structure Length: ",
                     geometry[0].structureLength,
                     "m"
                 ]
@@ -1536,75 +1313,58 @@ const Geometry = ({ geometry })=>{
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Deck Width:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Geometry.tsx",
-                        lineNumber: 12,
-                        columnNumber: 9
-                    }, this),
-                    " ",
+                    "Deck Width: ",
                     geometry[0].deckWidth,
                     "m"
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/bridge-info/Geometry.tsx",
-                lineNumber: 11,
+                lineNumber: 10,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Roadway Width:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Geometry.tsx",
-                        lineNumber: 15,
-                        columnNumber: 9
-                    }, this),
-                    " ",
+                    "Roadway Width: ",
                     geometry[0].roadwayWidth,
                     "m"
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/bridge-info/Geometry.tsx",
-                lineNumber: 14,
+                lineNumber: 13,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Min Vertical Clearance:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Geometry.tsx",
-                        lineNumber: 19,
-                        columnNumber: 9
-                    }, this),
-                    " ",
+                    "Min Vertical Clearance: ",
                     geometry[0].minVertClearance,
                     "m"
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/bridge-info/Geometry.tsx",
-                lineNumber: 18,
+                lineNumber: 16,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Approach Width:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Geometry.tsx",
-                        lineNumber: 23,
-                        columnNumber: 9
-                    }, this),
-                    " ",
+                    "Approach Width: ",
                     geometry[0].apprWidth,
                     "m"
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/bridge-info/Geometry.tsx",
+                lineNumber: 19,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
+                children: [
+                    "Structure Flared: ",
+                    geometry[0].structureFlared ? "Yes" : "No"
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/bridge-info/Geometry.tsx",
@@ -1612,54 +1372,46 @@ const Geometry = ({ geometry })=>{
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Structure Flared:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Geometry.tsx",
-                        lineNumber: 27,
-                        columnNumber: 9
-                    }, this),
-                    " ",
-                    geometry[0].structureFlared ? "Yes" : "No"
-                ]
-            }, void 0, true, {
-                fileName: "[project]/src/components/bridge-info/Geometry.tsx",
-                lineNumber: 26,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Navigation Vertical Clearance:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Geometry.tsx",
-                        lineNumber: 31,
-                        columnNumber: 9
-                    }, this),
-                    " ",
+                    "Navigation Vertical Clearance: ",
                     geometry[0].navVertClearance,
                     "m"
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/bridge-info/Geometry.tsx",
-                lineNumber: 30,
+                lineNumber: 25,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Navigation Horizontal Clearance:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Geometry.tsx",
-                        lineNumber: 35,
-                        columnNumber: 9
-                    }, this),
-                    " ",
+                    "Navigation Horizontal Clearance: ",
                     geometry[0].navHorrClearance,
+                    "m"
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/bridge-info/Geometry.tsx",
+                lineNumber: 28,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
+                children: [
+                    "Left Curb Width: ",
+                    geometry[0].leftCurbWidth,
+                    "m"
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/bridge-info/Geometry.tsx",
+                lineNumber: 31,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
+                children: [
+                    "Right Curb Width: ",
+                    geometry[0].rightCurbWidth,
                     "m"
                 ]
             }, void 0, true, {
@@ -1668,60 +1420,15 @@ const Geometry = ({ geometry })=>{
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Left Curb Width:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Geometry.tsx",
-                        lineNumber: 39,
-                        columnNumber: 9
-                    }, this),
-                    " ",
-                    geometry[0].leftCurbWidth,
-                    "m"
-                ]
-            }, void 0, true, {
-                fileName: "[project]/src/components/bridge-info/Geometry.tsx",
-                lineNumber: 38,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Right Curb Width:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Geometry.tsx",
-                        lineNumber: 43,
-                        columnNumber: 9
-                    }, this),
-                    " ",
-                    geometry[0].rightCurbWidth,
-                    "m"
-                ]
-            }, void 0, true, {
-                fileName: "[project]/src/components/bridge-info/Geometry.tsx",
-                lineNumber: 42,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Deck Area:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Geometry.tsx",
-                        lineNumber: 47,
-                        columnNumber: 9
-                    }, this),
-                    " ",
+                    "Deck Area: ",
                     geometry[0].deckArea,
                     "m²"
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/bridge-info/Geometry.tsx",
-                lineNumber: 46,
+                lineNumber: 37,
                 columnNumber: 7
             }, this)
         ]
@@ -1761,16 +1468,9 @@ const Structure = ({ structure })=>{
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Structure Kind:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Structure.tsx",
-                        lineNumber: 8,
-                        columnNumber: 9
-                    }, this),
-                    " ",
+                    "Structure Kind: ",
                     structure[0].structureKind
                 ]
             }, void 0, true, {
@@ -1779,71 +1479,54 @@ const Structure = ({ structure })=>{
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Main Unit Spans:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Structure.tsx",
-                        lineNumber: 12,
-                        columnNumber: 9
-                    }, this),
-                    " ",
+                    "Main Unit Spans: ",
                     structure[0].mainUnitSpans
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/bridge-info/Structure.tsx",
-                lineNumber: 11,
+                lineNumber: 10,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Median Code:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Structure.tsx",
-                        lineNumber: 16,
-                        columnNumber: 9
-                    }, this),
-                    " ",
+                    "Median Code: ",
                     structure[0].medianCode
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/bridge-info/Structure.tsx",
-                lineNumber: 15,
+                lineNumber: 13,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Approach Kind:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Structure.tsx",
-                        lineNumber: 19,
-                        columnNumber: 9
-                    }, this),
-                    " ",
+                    "Approach Kind: ",
                     structure[0].apprKind
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/bridge-info/Structure.tsx",
-                lineNumber: 18,
+                lineNumber: 16,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Structure Type:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Structure.tsx",
-                        lineNumber: 23,
-                        columnNumber: 9
-                    }, this),
-                    " ",
+                    "Structure Type: ",
                     structure[0].structureType
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/bridge-info/Structure.tsx",
+                lineNumber: 19,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
+                children: [
+                    "Approach Type: ",
+                    structure[0].apprType
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/bridge-info/Structure.tsx",
@@ -1851,53 +1534,43 @@ const Structure = ({ structure })=>{
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Approach Type:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Structure.tsx",
-                        lineNumber: 27,
-                        columnNumber: 9
-                    }, this),
-                    " ",
-                    structure[0].apprType
-                ]
-            }, void 0, true, {
-                fileName: "[project]/src/components/bridge-info/Structure.tsx",
-                lineNumber: 26,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Approach Spans:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Structure.tsx",
-                        lineNumber: 31,
-                        columnNumber: 9
-                    }, this),
-                    " ",
+                    "Approach Spans: ",
                     structure[0].apprSpans
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/bridge-info/Structure.tsx",
-                lineNumber: 30,
+                lineNumber: 25,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Deck Structure Type:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Structure.tsx",
-                        lineNumber: 35,
-                        columnNumber: 9
-                    }, this),
-                    " ",
+                    "Deck Structure Type: ",
                     structure[0].deckStructureType
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/bridge-info/Structure.tsx",
+                lineNumber: 28,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
+                children: [
+                    "Railings: ",
+                    structure[0].railings || "N/A"
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/bridge-info/Structure.tsx",
+                lineNumber: 31,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
+                children: [
+                    "Transitions: ",
+                    structure[0].transitions || "N/A"
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/bridge-info/Structure.tsx",
@@ -1905,93 +1578,36 @@ const Structure = ({ structure })=>{
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Railings:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Structure.tsx",
-                        lineNumber: 39,
-                        columnNumber: 9
-                    }, this),
-                    " ",
-                    structure[0].railings || "N/A"
-                ]
-            }, void 0, true, {
-                fileName: "[project]/src/components/bridge-info/Structure.tsx",
-                lineNumber: 38,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Transitions:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Structure.tsx",
-                        lineNumber: 43,
-                        columnNumber: 9
-                    }, this),
-                    " ",
-                    structure[0].transitions || "N/A"
-                ]
-            }, void 0, true, {
-                fileName: "[project]/src/components/bridge-info/Structure.tsx",
-                lineNumber: 42,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Approach Rail:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Structure.tsx",
-                        lineNumber: 47,
-                        columnNumber: 9
-                    }, this),
-                    " ",
+                    "Approach Rail: ",
                     structure[0].apprRail || "N/A"
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/bridge-info/Structure.tsx",
-                lineNumber: 46,
+                lineNumber: 37,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Approach Rail End:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Structure.tsx",
-                        lineNumber: 51,
-                        columnNumber: 9
-                    }, this),
-                    " ",
+                    "Approach Rail End: ",
                     structure[0].apprRailEnd || "N/A"
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/bridge-info/Structure.tsx",
-                lineNumber: 50,
+                lineNumber: 40,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-bold",
-                        children: "Parallel Structure:"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/bridge-info/Structure.tsx",
-                        lineNumber: 55,
-                        columnNumber: 9
-                    }, this),
-                    " ",
+                    "Parallel Structure: ",
                     structure[0].parallelStructure
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/bridge-info/Structure.tsx",
-                lineNumber: 54,
+                lineNumber: 43,
                 columnNumber: 7
             }, this)
         ]
@@ -2026,9 +1642,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$bridge$
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$bridge$2d$info$2f$Maintenance$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/components/bridge-info/Maintenance.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$bridge$2d$info$2f$Geometry$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/components/bridge-info/Geometry.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$bridge$2d$info$2f$Structure$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/components/bridge-info/Structure.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$trimQuotes$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/utils/trimQuotes.ts [app-client] (ecmascript)");
 ;
 var _s = __turbopack_refresh__.signature();
 "use client";
+;
 ;
 ;
 ;
@@ -2074,14 +1692,14 @@ const BridgeCard = ({ structureNumber, setSelectedStructureNumber })=>{
             children: "Select a bridge to view details."
         }, void 0, false, {
             fileName: "[project]/src/components/bridge-info/BridgeCard.tsx",
-            lineNumber: 53,
+            lineNumber: 54,
             columnNumber: 7
         }, this);
     }
     if (loading) {
         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$ui$2f$Loading$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
             fileName: "[project]/src/components/bridge-info/BridgeCard.tsx",
-            lineNumber: 60,
+            lineNumber: 61,
             columnNumber: 12
         }, this);
     }
@@ -2091,7 +1709,7 @@ const BridgeCard = ({ structureNumber, setSelectedStructureNumber })=>{
             children: error
         }, void 0, false, {
             fileName: "[project]/src/components/bridge-info/BridgeCard.tsx",
-            lineNumber: 65,
+            lineNumber: 66,
             columnNumber: 7
         }, this);
     }
@@ -2101,13 +1719,13 @@ const BridgeCard = ({ structureNumber, setSelectedStructureNumber })=>{
             children: "No data available for this bridge."
         }, void 0, false, {
             fileName: "[project]/src/components/bridge-info/BridgeCard.tsx",
-            lineNumber: 73,
+            lineNumber: 74,
             columnNumber: 7
         }, this);
     }
     const { navigation, conditon, maintenance, geometry, structure, history, serviceOn, routePrefix, fedAgency, ...bridge } = bridgeData;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "w-full overscroll-contain h-full bg-opacity-50 backdrop-blur-md overflow-y-scroll overflow-x-hidden fixed left-0 top-0 p-6 bg-white shadow-md rounded-md text-black z-40",
+        className: "overscroll-contain p-6 min-w-[270px] h-screen overflow-y-auto bg-white shadow-md rounded-md text-black  w-1/2 ",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "flex justify-between",
@@ -2117,85 +1735,68 @@ const BridgeCard = ({ structureNumber, setSelectedStructureNumber })=>{
                         children: "Bridge Details"
                     }, void 0, false, {
                         fileName: "[project]/src/components/bridge-info/BridgeCard.tsx",
-                        lineNumber: 95,
+                        lineNumber: 96,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         onClick: ()=>setSelectedStructureNumber(null),
-                        className: "p-2 font-bold border-2 rounded-xl hover:scale-110 transition cursor-pointer ease-in-out",
-                        children: "x"
+                        className: "p-2 font-bold rounded-full bg-red-500 text-white hover:bg-red-600 transition-transform transform hover:scale-110 shadow-md w-10",
+                        "aria-label": "Close",
+                        children: "✖"
                     }, void 0, false, {
                         fileName: "[project]/src/components/bridge-info/BridgeCard.tsx",
-                        lineNumber: 96,
+                        lineNumber: 97,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/bridge-info/BridgeCard.tsx",
-                lineNumber: 94,
+                lineNumber: 95,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "grid grid-cols-2 gap-2",
+                className: "grid",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
                         children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                className: "text-lg font-semibold",
-                                children: "General Information"
-                            }, void 0, false, {
-                                fileName: "[project]/src/components/bridge-info/BridgeCard.tsx",
-                                lineNumber: 105,
-                                columnNumber: 11
-                            }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "text-sm",
                                 children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "font-bold",
-                                        children: "Structure Number:"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/bridge-info/BridgeCard.tsx",
-                                        lineNumber: 107,
-                                        columnNumber: 13
-                                    }, this),
-                                    " ",
+                                    "Structure Number: ",
                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$structureNum$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["transformStructureNum"])(bridge.structureNumber)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/bridge-info/BridgeCard.tsx",
-                                lineNumber: 106,
+                                lineNumber: 108,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "text-sm",
                                 children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "font-bold",
-                                        children: "Location:"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/bridge-info/BridgeCard.tsx",
-                                        lineNumber: 111,
-                                        columnNumber: 13
-                                    }, this),
-                                    " ",
-                                    bridge.location
+                                    "Location: ",
+                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$trimQuotes$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["trimQuotes"])(bridge.location)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/bridge-info/BridgeCard.tsx",
-                                lineNumber: 110,
+                                lineNumber: 111,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "text-sm",
                                 children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "font-bold",
-                                        children: "Year Built:"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/bridge-info/BridgeCard.tsx",
-                                        lineNumber: 114,
-                                        columnNumber: 13
-                                    }, this),
-                                    " ",
+                                    "Year Built: ",
                                     bridge.yearBuilt
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/components/bridge-info/BridgeCard.tsx",
+                                lineNumber: 112,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "text-sm",
+                                children: [
+                                    "Year Reconstructed: ",
+                                    bridge.yearReconstructed || "N/A"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/bridge-info/BridgeCard.tsx",
@@ -2203,17 +1804,10 @@ const BridgeCard = ({ structureNumber, setSelectedStructureNumber })=>{
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "text-sm",
                                 children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "font-bold",
-                                        children: "Year Reconstructed:"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/bridge-info/BridgeCard.tsx",
-                                        lineNumber: 117,
-                                        columnNumber: 13
-                                    }, this),
-                                    " ",
-                                    bridge.yearReconstructed || "N/A"
+                                    "Latitude: ",
+                                    bridge.lat
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/bridge-info/BridgeCard.tsx",
@@ -2221,17 +1815,43 @@ const BridgeCard = ({ structureNumber, setSelectedStructureNumber })=>{
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "text-sm",
                                 children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "font-bold",
-                                        children: "Latitude:"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/bridge-info/BridgeCard.tsx",
-                                        lineNumber: 121,
-                                        columnNumber: 13
-                                    }, this),
-                                    " ",
-                                    bridge.lat
+                                    "Longitude: ",
+                                    bridge.long
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/components/bridge-info/BridgeCard.tsx",
+                                lineNumber: 117,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "text-sm",
+                                children: [
+                                    "Route Prefix: ",
+                                    routePrefix
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/components/bridge-info/BridgeCard.tsx",
+                                lineNumber: 118,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "text-sm",
+                                children: [
+                                    "Federal Agency: ",
+                                    fedAgency
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/components/bridge-info/BridgeCard.tsx",
+                                lineNumber: 119,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "text-sm",
+                                children: [
+                                    "Service On: ",
+                                    serviceOn
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/bridge-info/BridgeCard.tsx",
@@ -2239,146 +1859,67 @@ const BridgeCard = ({ structureNumber, setSelectedStructureNumber })=>{
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "text-sm",
                                 children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "font-bold",
-                                        children: "Longitude:"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/bridge-info/BridgeCard.tsx",
-                                        lineNumber: 124,
-                                        columnNumber: 13
-                                    }, this),
-                                    " ",
-                                    bridge.long
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/components/bridge-info/BridgeCard.tsx",
-                                lineNumber: 123,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "font-bold",
-                                        children: "Route Prefix:"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/bridge-info/BridgeCard.tsx",
-                                        lineNumber: 127,
-                                        columnNumber: 13
-                                    }, this),
-                                    " ",
-                                    routePrefix
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/components/bridge-info/BridgeCard.tsx",
-                                lineNumber: 126,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "font-bold",
-                                        children: "Federal Agency:"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/bridge-info/BridgeCard.tsx",
-                                        lineNumber: 130,
-                                        columnNumber: 13
-                                    }, this),
-                                    " ",
-                                    fedAgency
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/components/bridge-info/BridgeCard.tsx",
-                                lineNumber: 129,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "font-bold",
-                                        children: "Service On:"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/bridge-info/BridgeCard.tsx",
-                                        lineNumber: 133,
-                                        columnNumber: 13
-                                    }, this),
-                                    " ",
-                                    serviceOn
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/components/bridge-info/BridgeCard.tsx",
-                                lineNumber: 132,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "font-bold",
-                                        children: "History:"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/bridge-info/BridgeCard.tsx",
-                                        lineNumber: 136,
-                                        columnNumber: 13
-                                    }, this),
-                                    " ",
+                                    "History: ",
                                     history
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/bridge-info/BridgeCard.tsx",
-                                lineNumber: 135,
+                                lineNumber: 121,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/bridge-info/BridgeCard.tsx",
-                        lineNumber: 104,
+                        lineNumber: 107,
                         columnNumber: 9
                     }, this),
                     navigation && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$bridge$2d$info$2f$Navigation$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                         navigation: navigation
                     }, void 0, false, {
                         fileName: "[project]/src/components/bridge-info/BridgeCard.tsx",
-                        lineNumber: 139,
+                        lineNumber: 124,
                         columnNumber: 24
                     }, this),
                     conditon && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$bridge$2d$info$2f$Condition$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                         condition: conditon
                     }, void 0, false, {
                         fileName: "[project]/src/components/bridge-info/BridgeCard.tsx",
-                        lineNumber: 140,
+                        lineNumber: 125,
                         columnNumber: 22
                     }, this),
                     maintenance && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$bridge$2d$info$2f$Maintenance$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                         maintenance: maintenance
                     }, void 0, false, {
                         fileName: "[project]/src/components/bridge-info/BridgeCard.tsx",
-                        lineNumber: 141,
+                        lineNumber: 126,
                         columnNumber: 25
                     }, this),
                     geometry && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$bridge$2d$info$2f$Geometry$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                         geometry: geometry
                     }, void 0, false, {
                         fileName: "[project]/src/components/bridge-info/BridgeCard.tsx",
-                        lineNumber: 142,
+                        lineNumber: 127,
                         columnNumber: 22
                     }, this),
                     structure && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$bridge$2d$info$2f$Structure$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                         structure: structure
                     }, void 0, false, {
                         fileName: "[project]/src/components/bridge-info/BridgeCard.tsx",
-                        lineNumber: 143,
+                        lineNumber: 128,
                         columnNumber: 23
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/bridge-info/BridgeCard.tsx",
-                lineNumber: 103,
+                lineNumber: 106,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/bridge-info/BridgeCard.tsx",
-        lineNumber: 93,
+        lineNumber: 94,
         columnNumber: 5
     }, this);
 };

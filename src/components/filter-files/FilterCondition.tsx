@@ -2,6 +2,7 @@ import React from "react";
 import Dropdown from "@/ui/DropDown";
 import RangeInput from "@/ui/RangeInput";
 import { reverseMap } from "@/utils/reverseMap";
+import { conditionMap, overallConditionMap } from "../NBIHashmaps";
 
 interface FilterConditionsProps {
   filterParams: {
@@ -22,25 +23,6 @@ interface FilterConditionsProps {
   handleFilterChange: (key: string, value: any) => void;
 }
 
-const conditionMap: Record<number | string, string> = {
-  "N": "NOT APPLICABLE",
-  "9": "EXCELLENT",
-  "8": "VERY GOOD",
-  "7": "GOOD",
-  "6": "SATISFACTORY",
-  "5": "FAIR",
-  "4": "POOR",
-  "3": "SERIOUS",
-  "2": "CRITICAL",
-  "1": '"IMMINENT" FAILURE',
-  "0": "FAILED",
-};
-
-const overallConditionMap: Record<number | string, string> = {
-  "F": "FAIR",
-  "G": "GOOD",
-  "P": "POOR",
-};
 
 // Reverse maps
 const reverseConditionMap = reverseMap(conditionMap);

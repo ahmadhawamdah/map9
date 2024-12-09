@@ -8,6 +8,9 @@ import Condition from "./Condition";
 import Maintenance from "./Maintenance";
 import Geometry from "./Geometry";
 import Structure from "./Structure";
+import { trimQuotes } from "@/utils/trimQuotes";
+import { convertLatitude, convertLongitude } from "@/utils/geoConversion";
+import { highwayMap, historicStatusMap, serviceMap } from "../NBIHashmaps";
 
 interface BridgeCardProps {
   structureNumber: string | null; // The selected structure number
@@ -23,8 +26,7 @@ const BridgeCard: React.FC<BridgeCardProps> = ({
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    if (!structureNumber) 
-      return;
+    if (!structureNumber) return;
 
     const fetchBridgeData = async () => {
       setLoading(true);
@@ -90,52 +92,36 @@ const BridgeCard: React.FC<BridgeCardProps> = ({
   } = bridgeData;
 
   return (
-    <div className="w-full overscroll-contain h-full bg-opacity-50 backdrop-blur-md overflow-y-scroll overflow-x-hidden fixed left-0 top-0 p-6 bg-white shadow-md rounded-md text-black z-40">
+    <div className="overscroll-contain p-6 min-w-[270px] h-screen overflow-y-auto bg-white shadow-md rounded-md text-black  w-1/2 ">
       <div className="flex justify-between">
         <h2 className="text-xl font-bold">Bridge Details</h2>
         <button
           onClick={() => setSelectedStructureNumber(null)}
-          className="p-2 font-bold border-2 rounded-xl hover:scale-110 transition cursor-pointer ease-in-out"
+          className="p-2 font-bold rounded-full bg-yellow-400 text-white hover:bg-red-600 transition-transform transform hover:scale-110 shadow-md w-10"
+          aria-label="Close"
         >
-          x
+          ✖
         </button>
       </div>
-      <div className="grid grid-cols-2 gap-2">
+      {/* <ThreeDHighway /> */}
+      <div className="grid">
         <section>
-          <h3 className="text-lg font-semibold">General Information</h3>
-          <p>
-            <span className="font-bold">Structure Number:</span>{" "}
-            {transformStructureNum(bridge.structureNumber)}
+          <p className="text-sm">
+            Structure Number: {transformStructureNum(bridge.structureNumber)}
           </p>
-          <p>
-            <span className="font-bold">Location:</span> {bridge.location}
+          <p className="text-sm">Location: {trimQuotes(bridge.location)}</p>
+          <p className="text-sm">Year Built: {bridge.yearBuilt}</p>
+          <p className="text-sm">
+            Year Reconstructed: {bridge.yearReconstructed || "N/A"}
           </p>
-          <p>
-            <span className="font-bold">Year Built:</span> {bridge.yearBuilt}
-          </p>
-          <p>
-            <span className="font-bold">Year Reconstructed:</span>{" "}
-            {bridge.yearReconstructed || "N/A"}
-          </p>
-          <p>
-            <span className="font-bold">Latitude:</span> {bridge.lat}
-          </p>
-          <p>
-            <span className="font-bold">Longitude:</span> {bridge.long}
-          </p>
-          <p>
-            <span className="font-bold">Route Prefix:</span> {routePrefix}
-          </p>
-          <p>
-            <span className="font-bold">Federal Agency:</span> {fedAgency}
-          </p>
-          <p>
-            <span className="font-bold">Service On:</span> {serviceOn}
-          </p>
-          <p>
-            <span className="font-bold">History:</span> {history}
-          </p>
+          <p className="text-sm">Latitude: {convertLatitude(bridge.lat)}</p>
+          <p className="text-sm">Longitude: {convertLongitude(bridge.long)}</p>
+          <p className="text-sm">Route Prefix: {highwayMap[routePrefix]}</p>
+          <p className="text-sm">Federal Agency: {fedAgency}</p>
+          <p className="text-sm">Service On: {serviceMap[serviceOn]}</p>
+          <p className="text-sm">History: {historicStatusMap[history]}</p>
         </section>
+
         {navigation && <Navigation navigation={navigation} />}
         {conditon && <Condition condition={conditon} />}
         {maintenance && <Maintenance maintenance={maintenance} />}

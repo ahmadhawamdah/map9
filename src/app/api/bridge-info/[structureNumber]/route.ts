@@ -33,7 +33,7 @@ export async function GET(
     if (!bridgeData) {
       return NextResponse.json({ error: "Bridge not found" }, { status: 404 });
     }
-    console.log(bridgeData);
+
     return NextResponse.json(bridgeData, { status: 200 });
   } catch (error) {
     console.error("Error fetching bridge data:", error);

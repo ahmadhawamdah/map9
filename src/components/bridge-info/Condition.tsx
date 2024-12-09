@@ -1,28 +1,24 @@
 import React from "react";
+import { conditionMap, overallConditionMap } from "../NBIHashmaps";
 
 const Condition = ({ condition }: { condition: any }) => {
   return (
     <section>
       <h3 className="text-lg font-semibold">Condition</h3>
-      <p>
-        <span className="font-bold">Bridge Condition:</span>{" "}
-        {condition[0].bridgeCondition}
+      <p className="text-sm">
+        Bridge Condition: {overallConditionMap[condition[0].bridgeCondition]}
       </p>
-      <p>
-        <span className="font-bold">Deck Condition:</span>{" "}
-        {condition[0].deckCond}
+      <p className="text-sm">
+        Deck Condition: {conditionMap[condition[0].deckCond]}
       </p>
-      <p>
-        <span className="font-bold">Superstructure Condition:</span>{" "}
-        {condition[0].superstructureCond}
+      <p className="text-sm">
+        Superstructure Condition: {conditionMap[condition[0].superstructureCond]}
       </p>
-      <p>
-        <span className="font-bold">Substructure Condition:</span>{" "}
-        {condition[0].substructureCond}
+      <p className="text-sm">
+        Substructure Condition: {conditionMap[condition[0].substructureCond]}
       </p>
-      <p>
-        <span className="font-bold">Channel Condition:</span>{" "}
-        {condition[0].channelCond || "N/A"}
+      <p className="text-sm">
+        Channel Condition: {conditionMap[condition[0].channelCond] || "N/A"}
       </p>
     </section>
   );

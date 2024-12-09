@@ -27,16 +27,16 @@ const Dropdown: React.FC<DropdownProps> = ({ options, selected, onSelect, label 
   }, []);
 
   return (
-    <div className="relative z-30" ref={dropdownRef}>
+    <div className="relative" ref={dropdownRef}>
       {label && <label className="text-black font-medium mb-2 block">{label}</label>}
       <button
         onClick={() => setIsOpen((prev) => !prev)}
-        className="w-full text-left px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-black focus:outline-none bg-white"
+        className="w-full text-left px-4 py-2 border text-gray-800 border-gray-300 rounded focus:ring-2 focus:ring-black focus:outline-none bg-white"
       >
         {selected || "Select an option"}
       </button>
       {isOpen && (
-        <ul className="absolute w-full mt-1 bg-white border border-gray-300 rounded shadow-lg max-h-40 overflow-y-auto z-10">
+        <ul className="absolute w-full mt-1 bg-white border border-gray-300 rounded shadow-lg max-h-40 overflow-y-auto z-30">
           {options.length > 0 ? (
             options.map((option, index) => (
               <li

@@ -3,6 +3,7 @@ import TextInput from "@/ui/TextInput";
 import Dropdown from "@/ui/DropDown";
 import RangeInput from "@/ui/RangeInput";
 import { reverseMap } from "@/utils/reverseMap";
+import { highwayMap, serviceMap } from "../NBIHashmaps";
 
 interface FilterBridgesParams {
   filterParams: {
@@ -16,29 +17,7 @@ interface FilterBridgesParams {
   handleFilterChange: (key: string, value: any) => void;
 }
 
-const serviceMap: Record<string, string> = {
-  "1": "Highway, with or without pedestrian",
-  "2": "Railroad",
-  "3": "Pedestrian-bicycle",
-  "4": "Highway-railroad",
-  "5": "Waterway",
-  "6": "Highway-waterway",
-  "7": "Railroad-waterway",
-  "8": "Highway-waterway-railroad",
-  "9": "Relief for waterway",
-  "0": "Other",
-};
 
-const highwayMap: Record<string, string> = {
-  "1": "Interstate highway",
-  "2": "U.S. numbered highway",
-  "3": "State highway",
-  "4": "County highway",
-  "5": "City street",
-  "6": "Federal lands road",
-  "7": "State lands road",
-  "8": "Other (include toll roads not otherwise)",
-};
 
 const FilterBridge: React.FC<FilterBridgesParams> = ({
   filterParams,
