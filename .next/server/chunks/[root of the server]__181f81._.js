@@ -78,16 +78,24 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$prisma$2f$db$2e$ts__$5b$app$
 async function POST(req) {
     try {
         const body = await req.json();
-        const { location = "", yearBuilt = {
+        const { location = [], yearBuilt = {
             min: 1967,
             max: 2024
         }, yearReconstructed = {
             min: 0,
             max: 2024
-        }, fedAgency = "", serviceOn = 0, routePrefix = 0, long = 0, lat = 0 } = body;
+        }, fedAgency = "", serviceOn = 0, routePrefix = 0 } = body;
         // Build filters dynamically
         const filters = {};
-        if (location) filters.stateCode = parseInt(location, 10);
+        if (location) {
+            const locationParts = location.split(" ").filter((part)=>part.trim() !== ""); // Split by spaces and remove empty parts
+            filters.OR = locationParts.map((loc)=>({
+                    location: {
+                        contains: loc,
+                        mode: "insensitive"
+                    }
+                }));
+        }
         if (yearBuilt.min || yearBuilt.max) {
             filters.yearBuilt = {
                 gte: yearBuilt.min || undefined,

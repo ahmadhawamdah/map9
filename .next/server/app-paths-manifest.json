@@ -1,7 +1,3 @@
 {
-  "/api/bridge-info/[structureNumber]/route": "app/api/bridge-info/[structureNumber]/route.js",
-  "/(dashboard)/condition/page": "app/(dashboard)/condition/page.js",
-  "/api/condition/route": "app/api/condition/route.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/(dashboard)/bridge/page": "app/(dashboard)/bridge/page.js"
+  "/api/bridge/route": "app/api/bridge/route.js"
 }

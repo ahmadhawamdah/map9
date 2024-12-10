@@ -125,7 +125,7 @@ export interface Geometry {
 
 // Filter Files Types:
 interface FilterBridgesParams {
-  location: string | number;
+  location: string;
   yearBuilt: { min: number; max: number };
   yearReconstructed: { min: number; max: number };
   fedAgency: string;

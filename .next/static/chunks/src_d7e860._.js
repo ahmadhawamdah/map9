@@ -823,7 +823,7 @@ const FilterBridge = ({ filterParams, handleFilterChange })=>{
                 label: "Location",
                 placeholder: "Enter State Code",
                 value: filterParams.location,
-                onChange: (e)=>handleFilterChange("stateCode", e.target.value)
+                onChange: (e)=>handleFilterChange("location", e.target.value)
             }, void 0, false, {
                 fileName: "[project]/src/components/filter-files/FilterBridge.tsx",
                 lineNumber: 31,

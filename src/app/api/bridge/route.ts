@@ -5,31 +5,43 @@ export async function POST(req: Request) {
     const body = await req.json();
 
     const {
-      location = "",
+      location = [], // Expecting an array of strings for location
       yearBuilt = { min: 1967, max: 2024 },
       yearReconstructed = { min: 0, max: 2024 },
       fedAgency = "",
       serviceOn = 0,
       routePrefix = 0,
-      long = 0,
-      lat = 0,
     } = body;
 
     // Build filters dynamically
     const filters: any = {};
-    if (location) filters.stateCode = parseInt(location, 10);
+
+    if (location) {
+      const locationParts = location
+        .split(" ")
+        .filter((part: string) => part.trim() !== "");
+      filters.OR = locationParts.map((loc: string) => ({
+        location: {
+          contains: loc,
+          mode: "insensitive", // Optional: makes the search case-insensitive
+        },
+      }));
+    }
+
     if (yearBuilt.min || yearBuilt.max) {
       filters.yearBuilt = {
         gte: yearBuilt.min || undefined,
         lte: yearBuilt.max || undefined,
       };
     }
+
     if (yearReconstructed.min || yearReconstructed.max) {
       filters.yearReconstructed = {
         gte: yearReconstructed.min || undefined,
         lte: yearReconstructed.max || undefined,
       };
     }
+
     if (fedAgency) filters.fedAgency = fedAgency;
     if (serviceOn) filters.serviceOn = serviceOn;
     if (routePrefix) filters.routePrefix = routePrefix;

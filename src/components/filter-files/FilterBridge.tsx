@@ -7,7 +7,7 @@ import { highwayMap, serviceMap } from "../NBIHashmaps";
 
 interface FilterBridgesParams {
   filterParams: {
-    location: number | string;
+    location:string;
     yearBuilt: { min: number; max: number };
     yearReconstructed: { min: number; max: number };
     fedAgency: string;
@@ -32,7 +32,7 @@ const FilterBridge: React.FC<FilterBridgesParams> = ({
         label="Location"
         placeholder="Enter State Code"
         value={filterParams.location}
-        onChange={(e) => handleFilterChange("stateCode", e.target.value)}
+        onChange={(e) => handleFilterChange("location", e.target.value)}
       />
       <RangeInput
         label="Year Built"
