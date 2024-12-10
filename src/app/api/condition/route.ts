@@ -1,6 +1,4 @@
-import { PrismaClient } from "@prisma/client";
-
-const prisma = new PrismaClient();
+import prisma from "../../../../prisma/db";
 
 export async function POST(req: Request) {
   try {
@@ -51,8 +49,6 @@ export async function POST(req: Request) {
         lte: postingEval.max || undefined,
       };
     }
-    console.log(apprRoadEval);
-    console.log(postingEval);
 
     if (lowestRating.min || lowestRating.max) {
       filters.lowestRating = {

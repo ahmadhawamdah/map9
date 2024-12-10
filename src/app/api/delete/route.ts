@@ -5,7 +5,7 @@ import prisma from "../../../../prisma/db";
 export async function DELETE() {
   try {
     // Delete all rows from the specified table
-    await prisma.structure.deleteMany(); // Replace 'tableName' with your table name
+    // await prisma.structure.deleteMany(); // Replace 'tableName' with your table name
 
     // Return a success response
     return NextResponse.json(

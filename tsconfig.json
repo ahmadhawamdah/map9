@@ -22,6 +22,16 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "prisma/seed.js", "src/app/api/bridge-info/[structureNumber]/route.js"],
-  "exclude": ["node_modules",   ".next/types/app/api/bridge-info/[structureNumber]/route.ts"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "prisma/seed.js",
+    "src/app/api/bridge-info/[structureNumber]/route.js"
+  ],
+  "exclude": [
+    "node_modules",
+    ".next/types/app/api/bridge-info/[structureNumber]/route.ts"
+  ]
 }

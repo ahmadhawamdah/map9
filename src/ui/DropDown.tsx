@@ -27,7 +27,7 @@ const Dropdown: React.FC<DropdownProps> = ({ options, selected, onSelect, label 
   }, []);
 
   return (
-    <div className="relative" ref={dropdownRef}>
+    <div className="relative min-w-[200px]" ref={dropdownRef}>
       {label && <label className="text-black font-medium mb-2 block">{label}</label>}
       <button
         onClick={() => setIsOpen((prev) => !prev)}

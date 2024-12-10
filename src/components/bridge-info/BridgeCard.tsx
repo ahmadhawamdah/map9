@@ -122,11 +122,11 @@ const BridgeCard: React.FC<BridgeCardProps> = ({
           <p className="text-sm">History: {historicStatusMap[history]}</p>
         </section>
 
-        {navigation && <Navigation navigation={navigation} />}
-        {conditon && <Condition condition={conditon} />}
-        {maintenance && <Maintenance maintenance={maintenance} />}
-        {geometry && <Geometry geometry={geometry} />}
-        {structure && <Structure structure={structure} />}
+        {navigation && navigation.length > 0 && <Navigation navigation={navigation} />}
+        {conditon && conditon.length > 0 && <Condition condition={conditon} />}
+        {maintenance && maintenance.length > 0 && <Maintenance maintenance={maintenance} />}
+        {geometry && geometry.length > 0 && <Geometry geometry={geometry} />}
+        {structure && structure.length > 0 && <Structure structure={structure} />}
       </div>
     </div>
   );
