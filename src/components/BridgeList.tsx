@@ -2,23 +2,27 @@ import React from "react";
 import { Bridge } from "../../typing";
 import { transformStructureNum } from "@/utils/structureNum";
 import { trimQuotes } from "@/utils/trimQuotes";
+import Loading from "@/ui/Loading";
 
 interface BridgeListProps {
   bridges: Bridge[];
   setSelectedStructureNumber: (value: string) => void;
+  loading: boolean
 }
 
 const BridgeList: React.FC<BridgeListProps> = ({
   bridges,
   setSelectedStructureNumber,
+  loading
 }) => {
+
   return (
     <div className="p-5 pt-0 h-screen overflow-y-auto min-w-[270px] bg-white shadow-md rounded-md space-y-4 text-black">
       <h2 className="text-xl text-center font-semibold sticky top-0 bg-white z-10 p-5 border-b border-b-gray-500 w-full">
         Bridges List
       </h2>
 
-      {bridges && bridges.length > 0 ? (
+      {loading ? <Loading /> : bridges && bridges.length > 0 ? (
         bridges.map((bridge) => (
           <div
             key={bridge.structureNumber}
