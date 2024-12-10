@@ -150,3 +150,59 @@ const bridgeStatusMap: { [code: string]: string } = {
 };
 
 export { maintenanceAgencyMap, workProposedMap, bridgeStatusMap };
+
+
+// Structure
+const railingsMap: { [code: string]: string } = {
+    "0": "Inspected feature does not meet currently acceptable standards or a safety feature is required and none is provided.*",
+    "1": "Inspected feature meets currently acceptable standards.*",
+    "N": "Not applicable or a safety feature is not required.*"
+  };
+  
+  const structureTypeMap: { [code: number]: string } = {
+    1: "Slab",
+    2: "Stringer/Multi-beam or Girder",
+    3: "Girder and Floorbeam System",
+    4: "Tee Beam",
+    5: "Box Beam or Girders - Multiple",
+    6: "Box Beam or Girders - Single or Spread",
+    7: "Frame (except frame culverts)",
+    8: "Orthotropic",
+    9: "Truss - Deck",
+    10: "Truss - Thru",
+    11: "Arch - Deck",
+    12: "Arch - Thru",
+    13: "Suspension",
+    14: "Stayed Girder",
+    15: "Movable - Lift",
+    16: "Movable - Bascule",
+    17: "Movable - Swing",
+    18: "Tunnel",
+    19: "Culvert (includes frame culverts)",
+    20: "* Mixed types",
+    21: "Segmental Box Girder",
+    22: "Channel Beam",
+    0: "Other"
+  };
+
+  const structureKindMap: { [code: number]: string } = {
+    1: "Concrete",
+    2: "Concrete continuous",
+    3: "Steel",
+    4: "Steel continuous",
+    5: "Prestressed concrete *",
+    6: "Prestressed concrete continuous *",
+    7: "Wood or Timber",
+    8: "Masonry",
+    9: "Aluminum, Wrought Iron, or Cast Iron",
+    0: "Other"
+  };
+
+  const parallelStructureMap: { [code: string]: string } = {
+    "R": "The right structure of parallel bridges carrying the roadway in the direction of the inventory. (For a STRAHNET highway, this is west to east and south to north.)",
+    "L": "The left structure of parallel bridges. This structure carries traffic in the opposite direction.",
+    "N": "No parallel structure exists."
+  };
+  
+
+  export {railingsMap, structureTypeMap, structureKindMap, parallelStructureMap}

@@ -1,11 +1,12 @@
 import React from "react";
+import { parallelStructureMap, railingsMap, structureKindMap, structureTypeMap } from "../NBIHashmaps";
 
 const Structure = ({ structure }: { structure: any }) => {
   return (
     <section>
       <h3 className="text-lg font-semibold">Structure</h3>
       <p className="text-sm">
-        Structure Kind: {structure[0].structureKind}
+        Structure Kind: {structureKindMap[structure[0].structureKind]}
       </p>
       <p className="text-sm">
         Main Unit Spans: {structure[0].mainUnitSpans}
@@ -17,7 +18,7 @@ const Structure = ({ structure }: { structure: any }) => {
         Approach Kind: {structure[0].apprKind}
       </p>
       <p className="text-sm">
-        Structure Type: {structure[0].structureType}
+        Structure Type: {structureTypeMap[structure[0].structureType]}
       </p>
       <p className="text-sm">
         Approach Type: {structure[0].apprType}
@@ -29,19 +30,19 @@ const Structure = ({ structure }: { structure: any }) => {
         Deck Structure Type: {structure[0].deckStructureType}
       </p>
       <p className="text-sm">
-        Railings: {structure[0].railings || "N/A"}
+        Railings: {railingsMap[structure[0].railings] || "N/A"}
       </p>
       <p className="text-sm">
-        Transitions: {structure[0].transitions || "N/A"}
+        Transitions: {railingsMap[structure[0].transitions] || "N/A"}
       </p>
       <p className="text-sm">
-        Approach Rail: {structure[0].apprRail || "N/A"}
+        Approach Rail: {railingsMap[structure[0].apprRail] || "N/A"}
       </p>
       <p className="text-sm">
-        Approach Rail End: {structure[0].apprRailEnd || "N/A"}
+        Approach Rail End: {railingsMap[structure[0].apprRailEnd] || "N/A"}
       </p>
       <p className="text-sm">
-        Parallel Structure: {structure[0].parallelStructure}
+        Parallel Structure: {parallelStructureMap[structure[0].parallelStructure]}
       </p>
     </section>
   );

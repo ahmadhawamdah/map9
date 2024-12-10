@@ -92,8 +92,7 @@ const BridgeCard: React.FC<BridgeCardProps> = ({
   } = bridgeData;
 
   return (
-    <div className="overscroll-contain p-6 min-w-[270px] h-screen overflow-y-auto bg-white shadow-md rounded-md text-black  w-1/2 ">
-      <div className="flex justify-between">
+<div className="overscroll-contain p-6 min-w-[270px] w-screen sm:w-1/2 h-screen overflow-y-auto bg-white shadow-md rounded-md text-black fixed bottom-0 left-0 z-20 sm:static sm:bottom-auto sm:left-auto"><div className="flex justify-between">
         <h2 className="text-xl font-bold">Bridge Details</h2>
         <button
           onClick={() => setSelectedStructureNumber(null)}

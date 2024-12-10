@@ -14,7 +14,7 @@ const BridgeList: React.FC<BridgeListProps> = ({
 }) => {
   return (
     <div className="p-5 pt-0 h-screen overflow-y-auto min-w-[270px] bg-white shadow-md rounded-md space-y-4 text-black">
-      <h2 className="text-xl font-semibold sticky top-0 bg-white z-10 p-5 border-b border-b-gray-500 w-full">
+      <h2 className="text-xl text-center font-semibold sticky top-0 bg-white z-10 p-5 border-b border-b-gray-500 w-full">
         Bridges List
       </h2>
 
@@ -33,8 +33,8 @@ const BridgeList: React.FC<BridgeListProps> = ({
           </div>
         ))
       ) : (
-        <p className="text-base text-gray-800">
-          Click on "Apply Filters" to start
+        <p className="text-base text-center text-gray-800">
+          Adjust filters, and click on <br /> "Apply Filters" to start
         </p>
       )}
     </div>

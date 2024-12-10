@@ -17,12 +17,12 @@ async function main() {
   // console.log("Seeding Maintenance...");
   // await seedMaintenance();
   // console.log("Maintenance seeding finished.");
-  console.log("Seeding Structure...");
-  await seedStructure();
-  console.log("Structure seeding finished.");
-  // console.log("Seeding Geometry...");
-  // await seedGeometry();
-  // console.log("Geometry seeding finished.");
+  // console.log("Seeding Structure...");
+  // await seedStructure();
+  // console.log("Structure seeding finished.");
+  console.log("Seeding Geometry...");
+  await seedGeometry();
+  console.log("Geometry seeding finished.");
 }
 
 main().catch((err) => {

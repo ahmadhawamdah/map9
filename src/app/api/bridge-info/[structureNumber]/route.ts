@@ -26,7 +26,7 @@ export async function GET(
         conditon: true,
         maintenance: true,
         geometry: true,
-        Structure: true,
+        structure: true,
       },
     });
 

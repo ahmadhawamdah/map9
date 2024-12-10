@@ -26,7 +26,7 @@ model Bridge {
   conditon    Condition[]
   geometry    Geometry[]
   maintenance Maintenance[]
-  Structure   Structure[]
+  structure   Structure[]
 }
 
 model Navigation {

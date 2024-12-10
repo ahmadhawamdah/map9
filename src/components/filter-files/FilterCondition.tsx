@@ -33,9 +33,9 @@ const FilterCondition: React.FC<FilterConditionsProps> = ({
   handleFilterChange,
 }) => {
   return (
-    <div className="grid grid-cols-2 gap-2">
+    <div className="grid grid-col-1 md:grid-cols-2 gap-2">
     {/* Condition Columns */}
-    <div className="grid grid-cols-2 gap-2">
+    <div className="grid grid-col-1 sm:grid-cols-2 gap-2">
       <Dropdown
         label="Bridge Condition"
         options={Object.values(overallConditionMap)}
@@ -98,7 +98,7 @@ const FilterCondition: React.FC<FilterConditionsProps> = ({
     </div>
   
     {/* Evaluation Columns */}
-    <div className="grid grid-cols-2 gap-2 space">
+    <div className="grid grid-col-1 sm:grid-cols-2 gap-2">
       <Dropdown
         label="Structural Evaluation"
         options={Object.values(conditionMap)}

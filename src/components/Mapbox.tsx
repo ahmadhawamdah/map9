@@ -14,9 +14,8 @@ interface BridgeListProps {
 const Mapbox: React.FC<BridgeListProps> = ({ bridges }) => {
   // Track the structureNumber of the clicked bridge
   const [selectedBridge, setSelectedBridge] = useState<Bridge | null>(null);
-  console.log(selectedBridge);
   return (
-    <div className="flex h-screen flex-grow w-full p-4 bg-white shadow-md rounded-md">
+    <div className="hidden sm:flex h-screen flex-grow w-full p-4 bg-white shadow-md rounded-md">
       <Map
         mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_TOKEN}
         initialViewState={{

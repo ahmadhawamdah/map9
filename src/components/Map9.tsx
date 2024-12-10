@@ -77,7 +77,7 @@ const Map9: React.FC<Map9Props> = ({
         </div>
       </div>
 
-      <div className="flex h-full">
+      <div className="sm:flex h-full">
         <Mapbox bridges={filteredResults} />
         <BridgeList bridges={filteredResults} setSelectedStructureNumber={setSelectedStructureNumber} />
         {selectedStructureNumber && (

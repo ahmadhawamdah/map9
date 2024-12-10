@@ -27,7 +27,7 @@ const FilterBridge: React.FC<FilterBridgesParams> = ({
   const reverseHighwayMap = reverseMap(highwayMap);
 
   return (
-    <div className="grid grid-cols-3 gap-4">
+    <div className="grid grid-col-1 sm:grid-cols-3 gap-4">
       <TextInput
         label="Location"
         placeholder="Enter State Code"
