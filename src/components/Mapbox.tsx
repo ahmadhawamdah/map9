@@ -33,7 +33,7 @@ const Mapbox: React.FC<BridgeListProps> = ({ bridges }) => {
               latitude={convertLatitude(bridge.lat)}
             >
               <p
-                className="animate-bounce cursor-pointer text-xl"
+                className="cursor-pointer text-xl"
                 onClick={(e) => {
                   e.stopPropagation();
                   setSelectedBridge(bridge);
