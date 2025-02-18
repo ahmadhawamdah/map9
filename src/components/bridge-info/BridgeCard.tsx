@@ -1,6 +1,5 @@
 "use client";
 
-import Loading from "@/ui/Loading";
 import { transformStructureNum } from "@/utils/structureNum";
 import React, { useEffect, useState } from "react";
 import Navigation from "./Navigation";
@@ -14,22 +13,23 @@ import { highwayMap, historicStatusMap, serviceMap } from "../NBIHashmaps";
 
 interface BridgeCardProps {
   structureNumber: string; // The selected structure number
+  setCardLoading: React.Dispatch<React.SetStateAction<boolean>>;
   setSelectedStructureNumber: (value: string | null) => void;
 }
 
 const BridgeCard: React.FC<BridgeCardProps> = ({
   structureNumber,
+  setCardLoading,
   setSelectedStructureNumber,
 }) => {
   const [bridgeData, setBridgeData] = useState<any>(null);
-  const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     if (!structureNumber) return;
 
     const fetchBridgeData = async () => {
-      setLoading(true);
+      setCardLoading(true);
       setError(null);
       structureNumber = structureNumber.toString();
       try {
@@ -43,7 +43,7 @@ const BridgeCard: React.FC<BridgeCardProps> = ({
       } catch (err: any) {
         setError(err.message || "An error occurred while fetching data.");
       } finally {
-        setLoading(false);
+        setCardLoading(false);
       }
     };
 
@@ -56,10 +56,6 @@ const BridgeCard: React.FC<BridgeCardProps> = ({
         Select a bridge to view details.
       </div>
     );
-  }
-
-  if (loading) {
-    return <Loading />;
   }
 
   if (error) {
@@ -92,7 +88,7 @@ const BridgeCard: React.FC<BridgeCardProps> = ({
   } = bridgeData;
 
   return (
-    <div className="overscroll-contain p-6 min-w-[270px] w-screen sm:w-1/2 h-screen overflow-y-auto bg-white shadow-md rounded-md text-black fixed bottom-0 left-0 z-20 sm:static sm:bottom-auto sm:left-auto">
+    <div className="overscroll-contain p-6 min-w-[300px] w-screen sm:w-1/2 h-screen overflow-y-auto bg-white shadow-md rounded-md text-black fixed bottom-0 left-0 z-20 sm:static sm:bottom-auto sm:left-auto">
       <div className="flex justify-between">
         <h2 className="text-xl font-bold">Bridge Details</h2>
         <button

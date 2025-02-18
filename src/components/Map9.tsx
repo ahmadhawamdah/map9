@@ -30,6 +30,7 @@ const Map9: React.FC<Map9Props> = ({
     string | null
   >(null);
   const [loading, setLoading] = useState(false);
+  const [cardLoading, setCardLoading] = useState(false);
   const [viewport, setViewport] = useState<ViewportState>({
     longitude: -79.99,
     latitude: 40.44,
@@ -38,7 +39,6 @@ const Map9: React.FC<Map9Props> = ({
       -80.2433721923, 40.25736666160802, -79.74761413572277, 40.63464561993629,
     ] as [number, number, number, number], // Default viewport bounds
   });
-  console.log(viewport);
 
   // Unified function to fetch bridges, applies filters & viewport bounds
   const fetchBridges = useCallback(async () => {
@@ -107,15 +107,18 @@ const Map9: React.FC<Map9Props> = ({
           setViewport={setViewport}
         />
         <BridgeList
+          cardLoading = {cardLoading}
           bridges={filteredResults}
           setSelectedStructureNumber={setSelectedStructureNumber}
         />
-        {selectedStructureNumber && (
-          <BridgeCard
-            structureNumber={selectedStructureNumber}
-            setSelectedStructureNumber={setSelectedStructureNumber}
-          />
-        )}
+{selectedStructureNumber && (
+  <BridgeCard
+    setCardLoading={setCardLoading}  // ✅ Passed correctly
+    structureNumber={selectedStructureNumber}
+    setSelectedStructureNumber={setSelectedStructureNumber}
+  />
+)}
+
       </div>
     </div>
   );
