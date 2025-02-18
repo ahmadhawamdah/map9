@@ -31,7 +31,7 @@ const BridgeCard: React.FC<BridgeCardProps> = ({
     const fetchBridgeData = async () => {
       setLoading(true);
       setError(null);
-      structureNumber = structureNumber.toString()
+      structureNumber = structureNumber.toString();
       try {
         const res = await fetch(`/api/bridge-info/${structureNumber}`);
         if (!res.ok) {
@@ -92,7 +92,8 @@ const BridgeCard: React.FC<BridgeCardProps> = ({
   } = bridgeData;
 
   return (
-<div className="overscroll-contain p-6 min-w-[270px] w-screen sm:w-1/2 h-screen overflow-y-auto bg-white shadow-md rounded-md text-black fixed bottom-0 left-0 z-20 sm:static sm:bottom-auto sm:left-auto"><div className="flex justify-between">
+    <div className="overscroll-contain p-6 min-w-[270px] w-screen sm:w-1/2 h-screen overflow-y-auto bg-white shadow-md rounded-md text-black fixed bottom-0 left-0 z-20 sm:static sm:bottom-auto sm:left-auto">
+      <div className="flex justify-between">
         <h2 className="text-xl font-bold">Bridge Details</h2>
         <button
           onClick={() => setSelectedStructureNumber(null)}
@@ -121,11 +122,17 @@ const BridgeCard: React.FC<BridgeCardProps> = ({
           <p className="text-sm">History: {historicStatusMap[history]}</p>
         </section>
 
-        {navigation && navigation.length > 0 && <Navigation navigation={navigation} />}
+        {navigation && navigation.length > 0 && (
+          <Navigation navigation={navigation} />
+        )}
         {conditon && conditon.length > 0 && <Condition condition={conditon} />}
-        {maintenance && maintenance.length > 0 && <Maintenance maintenance={maintenance} />}
+        {maintenance && maintenance.length > 0 && (
+          <Maintenance maintenance={maintenance} />
+        )}
         {geometry && geometry.length > 0 && <Geometry geometry={geometry} />}
-        {structure && structure.length > 0 && <Structure structure={structure} />}
+        {structure && structure.length > 0 && (
+          <Structure structure={structure} />
+        )}
       </div>
     </div>
   );

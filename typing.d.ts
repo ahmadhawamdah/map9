@@ -148,3 +148,11 @@ interface FilterConditionsParams {
   postingEval: { min: number; max: number };
   lowestRating: { min: number; max: number };
 }
+
+// Mapbopx properties
+interface ViewportState {
+  longitude: number;
+  latitude: number;
+  zoom: number;
+  bounds: [number, number, number, number] | null; // Allow null
+}

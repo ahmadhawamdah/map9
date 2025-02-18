@@ -7,13 +7,11 @@ import Loading from "@/ui/Loading";
 interface BridgeListProps {
   bridges: Bridge[];
   setSelectedStructureNumber: (value: string) => void;
-  loading: boolean
 }
 
 const BridgeList: React.FC<BridgeListProps> = ({
   bridges,
   setSelectedStructureNumber,
-  loading
 }) => {
 
   return (
@@ -22,7 +20,7 @@ const BridgeList: React.FC<BridgeListProps> = ({
         Bridges List
       </h2>
 
-      {loading ? <Loading /> : bridges && bridges.length > 0 ? (
+      {bridges && bridges.length > 0 ? (
         bridges.map((bridge) => (
           <div
             key={bridge.structureNumber}

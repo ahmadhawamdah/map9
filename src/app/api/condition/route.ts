@@ -1,6 +1,7 @@
 import prisma from "../../../../prisma/db";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function POST(req: Request) {
+export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
 
@@ -18,12 +19,15 @@ export async function POST(req: Request) {
       apprRoadEval = { min: 0, max: 0 },
       postingEval = { min: 0, max: 0 },
       lowestRating = { min: 0, max: 0 },
+      bounds = null, // Viewport bounds (optional)
     } = body;
+
+    console.log("Received bounds:", bounds);
 
     // Initialize filters for Condition table
     const filters: any = {};
 
-    // Add string conditions to filters
+    // Apply string-based filters
     if (bridgeCondition) filters.bridgeCondition = bridgeCondition;
     if (deckCond) filters.deckCond = deckCond;
     if (superstructureCond) filters.superstructureCond = superstructureCond;
@@ -35,7 +39,7 @@ export async function POST(req: Request) {
     if (underclearanceEval) filters.underclearanceEval = underclearanceEval;
     if (waterwayEval) filters.waterwayEval = waterwayEval;
 
-    // Add range filters
+    // Apply range-based filters
     if (apprRoadEval.min || apprRoadEval.max) {
       filters.apprRoadEval = {
         gte: apprRoadEval.min || undefined,
@@ -57,7 +61,27 @@ export async function POST(req: Request) {
       };
     }
 
-    // Fetch filtered results with inner join on Bridge table
+    // Include viewport bounds if provided
+    if (bounds && Array.isArray(bounds) && bounds.length === 4) {
+      let [minLng, minLat, maxLng, maxLat] = bounds;
+
+      // Convert bounds to match database format (multiply by 1,000,000)
+      minLat = Math.round(minLat * 1_000_000);
+      maxLat = Math.round(maxLat * 1_000_000);
+      minLng = Math.round(minLng * 1_000_000);
+      maxLng = Math.round(maxLng * 1_000_000);
+
+      console.log(
+        `Filtering by viewport bounds: lat(${minLat} - ${maxLat}), long(${minLng} - ${maxLng})`
+      );
+
+      filters.Bridge = {
+        lat: { gte: minLat, lte: maxLat },
+        long: { gte: minLng, lte: maxLng },
+      };
+    }
+
+    // Query condition table with filters and join with bridge table
     const conditions = await prisma.condition.findMany({
       where: filters,
       include: {
@@ -73,7 +97,7 @@ export async function POST(req: Request) {
       },
     });
 
-    // Map results to include lat/long in top-level response
+    // Map results to include bridge data in the top-level response
     const results = conditions.map((condition) => ({
       id: condition.id,
       structureNumber: condition.structureNumber,
@@ -96,22 +120,20 @@ export async function POST(req: Request) {
       yearBuilt: condition.Bridge.yearBuilt,
     }));
 
-    return new Response(JSON.stringify(results), {
-      status: 200,
-      headers: { "Content-Type": "application/json" },
-    });
+    console.log(`Conditions found: ${results.length}`);
+
+    return NextResponse.json(results, { status: 200 });
   } catch (error) {
     console.error("Error fetching conditions:", error);
 
-    return new Response(
-      JSON.stringify({
+    return NextResponse.json(
+      {
         message: "Failed to fetch conditions",
         error: error instanceof Error ? error.message : "Unknown error",
-      }),
-      {
-        status: 500,
-        headers: { "Content-Type": "application/json" },
-      }
+      },
+      { status: 500 }
     );
+  } finally {
+    await prisma.$disconnect();
   }
 }

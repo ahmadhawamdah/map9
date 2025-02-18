@@ -3,5 +3,5 @@ export const convertLatitude = (rawLat: number): number => {
 };
 
 export const convertLongitude = (rawLong: number): number => {
-  return -rawLong / 1000000;
+  return rawLong / 1000000;
 };

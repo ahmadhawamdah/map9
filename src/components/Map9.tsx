@@ -1,19 +1,18 @@
 "use client";
 
 import Button from "@/ui/Button";
-import React, { useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import BridgeList from "./BridgeList";
 import {
   Bridge,
   FilterBridgesParams,
   FilterConditionsParams,
+  ViewportState,
 } from "../../typing";
 import FilterCondition from "./filter-files/FilterCondition";
 import FilterBridge from "./filter-files/FilterBridge";
 import Mapbox from "./Mapbox";
 import BridgeCard from "./bridge-info/BridgeCard";
-import Loading from "@/ui/Loading";
-
 
 interface Map9Props {
   type: "bridge" | "condition";
@@ -27,37 +26,57 @@ const Map9: React.FC<Map9Props> = ({
   handleFilterChange,
 }) => {
   const [filteredResults, setFilteredResults] = useState<Bridge[]>([]);
-  const [selectedStructureNumber, setSelectedStructureNumber] = useState<string | null>(null);
+  const [selectedStructureNumber, setSelectedStructureNumber] = useState<
+    string | null
+  >(null);
   const [loading, setLoading] = useState(false);
+  const [viewport, setViewport] = useState<ViewportState>({
+    longitude: -79.99,
+    latitude: 40.44,
+    zoom: 10,
+    bounds: [
+      -80.2433721923, 40.25736666160802, -79.74761413572277, 40.63464561993629,
+    ] as [number, number, number, number], // Default viewport bounds
+  });
+  console.log(viewport);
 
-  const handleApplyFilters = async () => {
+  // Unified function to fetch bridges, applies filters & viewport bounds
+  const fetchBridges = useCallback(async () => {
+    if (!viewport.bounds) return; // Ensure viewport bounds exist before fetching
+    setLoading(true);
+
     try {
-      setLoading(true);
-
       const res = await fetch(`/api/${type}`, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(filterParams),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...filterParams, bounds: viewport.bounds }), // Always send both filters & bounds
       });
 
-      if (!res.ok) {
-        throw new Error("Failed to fetch data");
-      }
+      if (!res.ok) throw new Error("Failed to fetch data");
 
       const data: Bridge[] = await res.json();
       setFilteredResults(data);
     } catch (error) {
-      console.error("Error fetching data:", error);
+      console.error("Error fetching bridges:", error);
     } finally {
       setLoading(false);
     }
+  }, [viewport.bounds, filterParams]); // Update when viewport or filters change
+
+  // Apply filters manually when user clicks the "Apply Filters" button
+  const handleApplyFilters = () => {
+    fetchBridges();
   };
 
-  if (loading) {
-    return <Loading />
-  }
+  // Automatically fetch bridges when the map viewport changes (debounced)
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      fetchBridges();
+    }, 500); // Debounce viewport updates to avoid excessive API calls
+
+    return () => clearTimeout(handler);
+  }, [viewport.bounds, filterParams]);
+
   return (
     <div>
       <div className="bg-white p-6 rounded-lg shadow-md mb-6">
@@ -82,8 +101,15 @@ const Map9: React.FC<Map9Props> = ({
       </div>
 
       <div className="sm:flex h-full">
-        <Mapbox bridges={filteredResults} />
-        <BridgeList loading = {loading} bridges={filteredResults} setSelectedStructureNumber={setSelectedStructureNumber} />
+        <Mapbox
+          bridges={filteredResults}
+          viewport={viewport}
+          setViewport={setViewport}
+        />
+        <BridgeList
+          bridges={filteredResults}
+          setSelectedStructureNumber={setSelectedStructureNumber}
+        />
         {selectedStructureNumber && (
           <BridgeCard
             structureNumber={selectedStructureNumber}
